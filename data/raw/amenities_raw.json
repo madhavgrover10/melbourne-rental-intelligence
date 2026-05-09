@@ -1,0 +1,632 @@
+{
+  "Melbourne": {
+    "supermarket": 35,
+    "cafe": 457,
+    "restaurant": 669,
+    "park": 83,
+    "gym": 16,
+    "pharmacy": 32,
+    "school": 8
+  },
+  "Richmond": {
+    "supermarket": 14,
+    "cafe": 77,
+    "restaurant": 81,
+    "park": 51,
+    "gym": 15,
+    "pharmacy": 12,
+    "school": 11
+  },
+  "South Yarra": {
+    "supermarket": 15,
+    "cafe": 62,
+    "restaurant": 88,
+    "park": 49,
+    "gym": 9,
+    "pharmacy": 13,
+    "school": 12
+  },
+  "Fitzroy": {
+    "supermarket": 29,
+    "cafe": 183,
+    "restaurant": 286,
+    "park": 95,
+    "gym": 22,
+    "pharmacy": 17,
+    "school": 15
+  },
+  "Collingwood": {
+    "supermarket": 28,
+    "cafe": 130,
+    "restaurant": 168,
+    "park": 71,
+    "gym": 20,
+    "pharmacy": 14,
+    "school": 12
+  },
+  "Carlton": {
+    "supermarket": 18,
+    "cafe": 122,
+    "restaurant": 188,
+    "park": 81,
+    "gym": 16,
+    "pharmacy": 10,
+    "school": 13
+  },
+  "Brunswick": {
+    "supermarket": 17,
+    "cafe": 89,
+    "restaurant": 101,
+    "park": 40,
+    "gym": 26,
+    "pharmacy": 13,
+    "school": 7
+  },
+  "Northcote": {
+    "supermarket": 9,
+    "cafe": 37,
+    "restaurant": 46,
+    "park": 42,
+    "gym": 9,
+    "pharmacy": 8,
+    "school": 8
+  },
+  "Thornbury": {
+    "supermarket": 7,
+    "cafe": 41,
+    "restaurant": 42,
+    "park": 36,
+    "gym": 7,
+    "pharmacy": 6,
+    "school": 12
+  },
+  "Preston": {
+    "supermarket": 10,
+    "cafe": 41,
+    "restaurant": 56,
+    "park": 18,
+    "gym": 9,
+    "pharmacy": 8,
+    "school": 8
+  },
+  "Coburg": {
+    "supermarket": 9,
+    "cafe": 40,
+    "restaurant": 40,
+    "park": 51,
+    "gym": 9,
+    "pharmacy": 5,
+    "school": 10
+  },
+  "Footscray": {
+    "supermarket": 12,
+    "cafe": 48,
+    "restaurant": 82,
+    "park": 50,
+    "gym": 7,
+    "pharmacy": 10,
+    "school": 8
+  },
+  "Yarraville": {
+    "supermarket": 7,
+    "cafe": 27,
+    "restaurant": 27,
+    "park": 39,
+    "gym": 10,
+    "pharmacy": 6,
+    "school": 7
+  },
+  "Williamstown": {
+    "supermarket": 2,
+    "cafe": 8,
+    "restaurant": 28,
+    "park": 24,
+    "gym": 0,
+    "pharmacy": 1,
+    "school": 7
+  },
+  "Seddon": {
+    "supermarket": 15,
+    "cafe": 49,
+    "restaurant": 82,
+    "park": 44,
+    "gym": 7,
+    "pharmacy": 14,
+    "school": 11
+  },
+  "St Kilda": {
+    "supermarket": 6,
+    "cafe": 36,
+    "restaurant": 60,
+    "park": 35,
+    "gym": 4,
+    "pharmacy": 4,
+    "school": 4
+  },
+  "St Kilda East": {
+    "supermarket": 6,
+    "cafe": 32,
+    "restaurant": 38,
+    "park": 26,
+    "gym": 3,
+    "pharmacy": 6,
+    "school": 15
+  },
+  "Elwood": {
+    "supermarket": 7,
+    "cafe": 35,
+    "restaurant": 53,
+    "park": 25,
+    "gym": 1,
+    "pharmacy": 6,
+    "school": 7
+  },
+  "Brighton": {
+    "supermarket": 3,
+    "cafe": 16,
+    "restaurant": 21,
+    "park": 14,
+    "gym": 0,
+    "pharmacy": 2,
+    "school": 3
+  },
+  "Caulfield": {
+    "supermarket": 4,
+    "cafe": 19,
+    "restaurant": 37,
+    "park": 8,
+    "gym": 6,
+    "pharmacy": 6,
+    "school": 8
+  },
+  "Malvern": {
+    "supermarket": 4,
+    "cafe": 18,
+    "restaurant": 12,
+    "park": 16,
+    "gym": 2,
+    "pharmacy": 4,
+    "school": 8
+  },
+  "Hawthorn": {
+    "supermarket": 3,
+    "cafe": 36,
+    "restaurant": 57,
+    "park": 38,
+    "gym": 8,
+    "pharmacy": 8,
+    "school": 13
+  },
+  "Kew": {
+    "supermarket": 4,
+    "cafe": 11,
+    "restaurant": 21,
+    "park": 34,
+    "gym": 1,
+    "pharmacy": 5,
+    "school": 8
+  },
+  "Camberwell": {
+    "supermarket": 4,
+    "cafe": 19,
+    "restaurant": 34,
+    "park": 26,
+    "gym": 4,
+    "pharmacy": 4,
+    "school": 3
+  },
+  "Box Hill": {
+    "supermarket": 14,
+    "cafe": 24,
+    "restaurant": 58,
+    "park": 32,
+    "gym": 2,
+    "pharmacy": 5,
+    "school": 6
+  },
+  "Doncaster": {
+    "supermarket": 3,
+    "cafe": 7,
+    "restaurant": 16,
+    "park": 48,
+    "gym": 4,
+    "pharmacy": 2,
+    "school": 4
+  },
+  "Glen Waverley": {
+    "supermarket": 5,
+    "cafe": 15,
+    "restaurant": 51,
+    "park": 40,
+    "gym": 1,
+    "pharmacy": 6,
+    "school": 11
+  },
+  "Clayton": {
+    "supermarket": 7,
+    "cafe": 14,
+    "restaurant": 55,
+    "park": 34,
+    "gym": 1,
+    "pharmacy": 5,
+    "school": 5
+  },
+  "Oakleigh": {
+    "supermarket": 6,
+    "cafe": 29,
+    "restaurant": 32,
+    "park": 25,
+    "gym": 5,
+    "pharmacy": 7,
+    "school": 5
+  },
+  "Bentleigh": {
+    "supermarket": 4,
+    "cafe": 4,
+    "restaurant": 14,
+    "park": 20,
+    "gym": 0,
+    "pharmacy": 2,
+    "school": 6
+  },
+  "Moorabbin": {
+    "supermarket": 2,
+    "cafe": 17,
+    "restaurant": 12,
+    "park": 8,
+    "gym": 4,
+    "pharmacy": 3,
+    "school": 10
+  },
+  "Cheltenham": {
+    "supermarket": 6,
+    "cafe": 25,
+    "restaurant": 25,
+    "park": 27,
+    "gym": 4,
+    "pharmacy": 6,
+    "school": 6
+  },
+  "Mentone": {
+    "supermarket": 5,
+    "cafe": 16,
+    "restaurant": 20,
+    "park": 31,
+    "gym": 3,
+    "pharmacy": 4,
+    "school": 7
+  },
+  "Frankston": {
+    "supermarket": 3,
+    "cafe": 17,
+    "restaurant": 25,
+    "park": 16,
+    "gym": 3,
+    "pharmacy": 6,
+    "school": 3
+  },
+  "Dandenong": {
+    "supermarket": 21,
+    "cafe": 20,
+    "restaurant": 35,
+    "park": 15,
+    "gym": 4,
+    "pharmacy": 8,
+    "school": 6
+  },
+  "Berwick": {
+    "supermarket": 2,
+    "cafe": 10,
+    "restaurant": 14,
+    "park": 41,
+    "gym": 3,
+    "pharmacy": 4,
+    "school": 7
+  },
+  "Narre Warren": {
+    "supermarket": 5,
+    "cafe": 7,
+    "restaurant": 12,
+    "park": 18,
+    "gym": 4,
+    "pharmacy": 4,
+    "school": 1
+  },
+  "Cranbourne": {
+    "supermarket": 8,
+    "cafe": 5,
+    "restaurant": 22,
+    "park": 23,
+    "gym": 4,
+    "pharmacy": 4,
+    "school": 8
+  },
+  "Pakenham": {
+    "supermarket": 3,
+    "cafe": 1,
+    "restaurant": 8,
+    "park": 47,
+    "gym": 0,
+    "pharmacy": 1,
+    "school": 4
+  },
+  "Werribee": {
+    "supermarket": 6,
+    "cafe": 9,
+    "restaurant": 10,
+    "park": 43,
+    "gym": 0,
+    "pharmacy": 0,
+    "school": 5
+  },
+  "Point Cook": {
+    "supermarket": 5,
+    "cafe": 5,
+    "restaurant": 1,
+    "park": 54,
+    "gym": 0,
+    "pharmacy": 3,
+    "school": 4
+  },
+  "Tarneit": {
+    "supermarket": 3,
+    "cafe": 0,
+    "restaurant": 0,
+    "park": 28,
+    "gym": 0,
+    "pharmacy": 1,
+    "school": 8
+  },
+  "Sunshine": {
+    "supermarket": 15,
+    "cafe": 16,
+    "restaurant": 16,
+    "park": 37,
+    "gym": 1,
+    "pharmacy": 10,
+    "school": 7
+  },
+  "Moonee Ponds": {
+    "supermarket": 9,
+    "cafe": 28,
+    "restaurant": 40,
+    "park": 28,
+    "gym": 3,
+    "pharmacy": 6,
+    "school": 10
+  },
+  "Essendon": {
+    "supermarket": 3,
+    "cafe": 12,
+    "restaurant": 10,
+    "park": 24,
+    "gym": 1,
+    "pharmacy": 2,
+    "school": 7
+  },
+  "Pascoe Vale": {
+    "supermarket": 7,
+    "cafe": 22,
+    "restaurant": 16,
+    "park": 34,
+    "gym": 9,
+    "pharmacy": 2,
+    "school": 9
+  },
+  "Ascot Vale": {
+    "supermarket": 10,
+    "cafe": 29,
+    "restaurant": 33,
+    "park": 30,
+    "gym": 5,
+    "pharmacy": 7,
+    "school": 10
+  },
+  "Glenroy": {
+    "supermarket": 4,
+    "cafe": 3,
+    "restaurant": 1,
+    "park": 23,
+    "gym": 1,
+    "pharmacy": 2,
+    "school": 8
+  },
+  "Reservoir": {
+    "supermarket": 6,
+    "cafe": 9,
+    "restaurant": 6,
+    "park": 31,
+    "gym": 5,
+    "pharmacy": 2,
+    "school": 4
+  },
+  "Heidelberg": {
+    "supermarket": 7,
+    "cafe": 17,
+    "restaurant": 18,
+    "park": 44,
+    "gym": 4,
+    "pharmacy": 6,
+    "school": 3
+  },
+  "Ivanhoe": {
+    "supermarket": 4,
+    "cafe": 13,
+    "restaurant": 13,
+    "park": 32,
+    "gym": 1,
+    "pharmacy": 2,
+    "school": 6
+  },
+  "Eltham": {
+    "supermarket": 4,
+    "cafe": 11,
+    "restaurant": 15,
+    "park": 52,
+    "gym": 9,
+    "pharmacy": 4,
+    "school": 5
+  },
+  "Greensborough": {
+    "supermarket": 4,
+    "cafe": 6,
+    "restaurant": 13,
+    "park": 45,
+    "gym": 6,
+    "pharmacy": 4,
+    "school": 8
+  },
+  "Bundoora": {
+    "supermarket": 5,
+    "cafe": 6,
+    "restaurant": 9,
+    "park": 45,
+    "gym": 1,
+    "pharmacy": 3,
+    "school": 7
+  },
+  "South Morang": {
+    "supermarket": 1,
+    "cafe": 2,
+    "restaurant": 4,
+    "park": 53,
+    "gym": 0,
+    "pharmacy": 2,
+    "school": 2
+  },
+  "Craigieburn": {
+    "supermarket": 1,
+    "cafe": 1,
+    "restaurant": 0,
+    "park": 29,
+    "gym": 0,
+    "pharmacy": 2,
+    "school": 3
+  },
+  "Sunbury": {
+    "supermarket": 6,
+    "cafe": 3,
+    "restaurant": 8,
+    "park": 31,
+    "gym": 1,
+    "pharmacy": 2,
+    "school": 7
+  },
+  "Broadmeadows": {
+    "supermarket": 5,
+    "cafe": 4,
+    "restaurant": 3,
+    "park": 24,
+    "gym": 0,
+    "pharmacy": 1,
+    "school": 19
+  },
+  "Abbotsford": {
+    "supermarket": 18,
+    "cafe": 72,
+    "restaurant": 87,
+    "park": 47,
+    "gym": 11,
+    "pharmacy": 9,
+    "school": 13
+  },
+  "Fitzroy North": {
+    "supermarket": 15,
+    "cafe": 77,
+    "restaurant": 136,
+    "park": 75,
+    "gym": 22,
+    "pharmacy": 11,
+    "school": 15
+  },
+  "Prahran": {
+    "supermarket": 11,
+    "cafe": 55,
+    "restaurant": 94,
+    "park": 44,
+    "gym": 10,
+    "pharmacy": 12,
+    "school": 15
+  },
+  "Windsor": {
+    "supermarket": 11,
+    "cafe": 44,
+    "restaurant": 64,
+    "park": 44,
+    "gym": 11,
+    "pharmacy": 9,
+    "school": 12
+  },
+  "Balaclava": {
+    "supermarket": 6,
+    "cafe": 32,
+    "restaurant": 43,
+    "park": 34,
+    "gym": 3,
+    "pharmacy": 6,
+    "school": 14
+  },
+  "Armadale": {
+    "supermarket": 6,
+    "cafe": 13,
+    "restaurant": 13,
+    "park": 15,
+    "gym": 2,
+    "pharmacy": 5,
+    "school": 12
+  },
+  "Toorak": {
+    "supermarket": 2,
+    "cafe": 7,
+    "restaurant": 5,
+    "park": 32,
+    "gym": 1,
+    "pharmacy": 2,
+    "school": 11
+  },
+  "Albert Park": {
+    "supermarket": 11,
+    "cafe": 65,
+    "restaurant": 78,
+    "park": 50,
+    "gym": 6,
+    "pharmacy": 8,
+    "school": 8
+  },
+  "Port Melbourne": {
+    "supermarket": 4,
+    "cafe": 27,
+    "restaurant": 19,
+    "park": 32,
+    "gym": 2,
+    "pharmacy": 3,
+    "school": 4
+  },
+  "South Melbourne": {
+    "supermarket": 17,
+    "cafe": 157,
+    "restaurant": 163,
+    "park": 73,
+    "gym": 15,
+    "pharmacy": 8,
+    "school": 7
+  },
+  "Docklands": {
+    "supermarket": 27,
+    "cafe": 284,
+    "restaurant": 349,
+    "park": 47,
+    "gym": 14,
+    "pharmacy": 18,
+    "school": 6
+  },
+  "Southbank": {
+    "supermarket": 29,
+    "cafe": 386,
+    "restaurant": 571,
+    "park": 75,
+    "gym": 16,
+    "pharmacy": 30,
+    "school": 4
+  }
+}

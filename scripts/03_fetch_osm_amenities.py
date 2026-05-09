@@ -134,7 +134,11 @@ def fetch_amenities(lat, lng, radius=SEARCH_RADIUS, retries=3):
         try:
             response = requests.post(
                 OVERPASS_URL,
-                data={'data': query},
+                data=query.encode('utf-8'),
+                headers={
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'User-Agent': 'MelbourneRentalIntelligence/1.0 (student research project)',
+                },
                 timeout=60
             )
             if response.status_code == 429:

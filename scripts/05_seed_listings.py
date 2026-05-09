@@ -275,14 +275,14 @@ def seed_listings(target=1200):
 
             conn.execute("""
                 INSERT INTO listings
-                    (suburb_id, price, bedrooms, bathrooms, parking,
-                     property_type, latitude, longitude,
-                     description, url, bond, days_on_market, scraped_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    (suburb_id, price_weekly, bedrooms, bathrooms,
+                    property_type, address, description, listing_url, source, scraped_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
-                suburb_id, price, beds, baths, parking,
-                prop_type, round(jitter_lat, 6), round(jitter_lng, 6),
-                description, url, bond, days_on_market, scraped_at
+                suburb_id, price, beds, baths,
+                prop_type,
+                f"{suburb}, VIC",
+                description, url, 'seeded', scraped_at
             ))
             inserted += 1
 
