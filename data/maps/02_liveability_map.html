@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d77664df19b852601eb13e5b7050d8c5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position:fixed;bottom:30px;left:30px;z-index:1000;
+                background:white;padding:12px 16px;border-radius:8px;
+                box-shadow:0 2px 8px rgba(0,0,0,0.15);font-family:sans-serif;font-size:12px;">
+        <b>Liveability score (0–10)</b><br>
+        <span style="color:#deebf7">●</span> Low (&lt;4)<br>
+        <span style="color:#4292c6">●</span> Medium (5–6)<br>
+        <span style="color:#08306b">●</span> High (&gt;7)<br>
+        <i style="color:#888;font-size:11px">Circle size = score magnitude</i>
+    </div>
+    
+    
+            <div class="folium-map" id="map_d77664df19b852601eb13e5b7050d8c5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d77664df19b852601eb13e5b7050d8c5 = L.map(
+                "map_d77664df19b852601eb13e5b7050d8c5",
+                {
+                    center: [-37.8136, 144.9631],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a309ed0308f4416a6155d63b560af3b2 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a309ed0308f4416a6155d63b560af3b2.addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            var circle_marker_965be3e090fffb10f7efcc6271e51ae0 = L.circleMarker(
+                [-37.8042, 144.9999],
+                {"bubblingMouseEvents": true, "color": "#08519c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08519c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.307692307692307, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_965be3e090fffb10f7efcc6271e51ae0.bindTooltip(
+                `<div>
+                     
+        <b>Abbotsford</b><br>
+        Liveability: <b>5.7/10</b><br>
+        Affordability: 0.70<br>
+        Walkability: 0.17<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.67
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36e77d5ebd9e6540981042792c5cdd82 = L.circleMarker(
+                [-37.8425, 144.9549],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.875, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_36e77d5ebd9e6540981042792c5cdd82.bindTooltip(
+                `<div>
+                     
+        <b>Albert Park</b><br>
+        Liveability: <b>5.2/10</b><br>
+        Affordability: 0.61<br>
+        Walkability: 0.15<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.54
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f149625242795bf22060d506c691d227 = L.circleMarker(
+                [-37.8555, 145.0176],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.26923076923077, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_f149625242795bf22060d506c691d227.bindTooltip(
+                `<div>
+                     
+        <b>Armadale</b><br>
+        Liveability: <b>5.1/10</b><br>
+        Affordability: 0.71<br>
+        Walkability: 0.02<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.45
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c407c6983f9d5599452fd6d5bdbaed66 = L.circleMarker(
+                [-37.7772, 144.9178],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.221153846153847, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_c407c6983f9d5599452fd6d5bdbaed66.bindTooltip(
+                `<div>
+                     
+        <b>Ascot Vale</b><br>
+        Liveability: <b>5.4/10</b><br>
+        Affordability: 0.80<br>
+        Walkability: 0.07<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.40
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6bece41b6c04786db200c74936e89994 = L.circleMarker(
+                [-37.8671, 144.993],
+                {"bubblingMouseEvents": true, "color": "#c6dbef", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c6dbef", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.971153846153845, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_6bece41b6c04786db200c74936e89994.bindTooltip(
+                `<div>
+                     
+        <b>Balaclava</b><br>
+        Liveability: <b>4.6/10</b><br>
+        Affordability: 0.54<br>
+        Walkability: 0.08<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.38
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_91995e87ab7ec6a3bcacd6c1f1ab9e05 = L.circleMarker(
+                [-37.9191, 145.036],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.259615384615383, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_91995e87ab7ec6a3bcacd6c1f1ab9e05.bindTooltip(
+                `<div>
+                     
+        <b>Bentleigh</b><br>
+        Liveability: <b>5.0/10</b><br>
+        Affordability: 0.73<br>
+        Walkability: 0.01<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.55
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1d7115277b5ce01183c4a781edb4cfa5 = L.circleMarker(
+                [-38.0358, 145.353],
+                {"bubblingMouseEvents": true, "color": "#08519c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08519c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.913461538461533, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_1d7115277b5ce01183c4a781edb4cfa5.bindTooltip(
+                `<div>
+                     
+        <b>Berwick</b><br>
+        Liveability: <b>5.8/10</b><br>
+        Affordability: 0.90<br>
+        Walkability: 0.04<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.51
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d8f3d9da69a6f071058cb283df41c636 = L.circleMarker(
+                [-37.8192, 145.1218],
+                {"bubblingMouseEvents": true, "color": "#9ecae1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9ecae1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.653846153846153, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_d8f3d9da69a6f071058cb283df41c636.bindTooltip(
+                `<div>
+                     
+        <b>Box Hill</b><br>
+        Liveability: <b>4.9/10</b><br>
+        Affordability: 0.55<br>
+        Walkability: 0.08<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b1a70d3bfe1b55e4a888e0a5968f60a = L.circleMarker(
+                [-37.9053, 144.9856],
+                {"bubblingMouseEvents": true, "color": "#9ecae1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9ecae1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.51923076923077, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_6b1a70d3bfe1b55e4a888e0a5968f60a.bindTooltip(
+                `<div>
+                     
+        <b>Brighton</b><br>
+        Liveability: <b>4.9/10</b><br>
+        Affordability: 0.72<br>
+        Walkability: 0.02<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.49
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b09113ac3f3edee704f91053075312b = L.circleMarker(
+                [-37.6815, 144.9208],
+                {"bubblingMouseEvents": true, "color": "#deebf7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#deebf7", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.826923076923077, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_8b09113ac3f3edee704f91053075312b.bindTooltip(
+                `<div>
+                     
+        <b>Broadmeadows</b><br>
+        Liveability: <b>4.5/10</b><br>
+        Affordability: 0.62<br>
+        Walkability: 0.02<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.43
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_37d3942c2149af1313f7e7dfb91774ce = L.circleMarker(
+                [-37.7666, 144.9604],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.153846153846153, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_37d3942c2149af1313f7e7dfb91774ce.bindTooltip(
+                `<div>
+                     
+        <b>Brunswick</b><br>
+        Liveability: <b>5.4/10</b><br>
+        Affordability: 0.62<br>
+        Walkability: 0.20<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.58
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_65827ce221dd950e5dbc52560a4f96d9 = L.circleMarker(
+                [-37.6982, 145.06],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.54807692307692, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_65827ce221dd950e5dbc52560a4f96d9.bindTooltip(
+                `<div>
+                     
+        <b>Bundoora</b><br>
+        Liveability: <b>5.3/10</b><br>
+        Affordability: 0.70<br>
+        Walkability: 0.03<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.58
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e937a9828b14b9edbc8dd35fa6a9ceb = L.circleMarker(
+                [-37.8328, 145.058],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.94230769230769, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_7e937a9828b14b9edbc8dd35fa6a9ceb.bindTooltip(
+                `<div>
+                     
+        <b>Camberwell</b><br>
+        Liveability: <b>5.2/10</b><br>
+        Affordability: 0.67<br>
+        Walkability: 0.05<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.57
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6043604b1a3f285577d9fa844094f5c8 = L.circleMarker(
+                [-37.7941, 144.9672],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.230769230769226, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_6043604b1a3f285577d9fa844094f5c8.bindTooltip(
+                `<div>
+                     
+        <b>Carlton</b><br>
+        Liveability: <b>5.6/10</b><br>
+        Affordability: 0.53<br>
+        Walkability: 0.33<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.70
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_442eda66db39af954ca1b516782ee280 = L.circleMarker(
+                [-37.8772, 145.023],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.06730769230769, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_442eda66db39af954ca1b516782ee280.bindTooltip(
+                `<div>
+                     
+        <b>Caulfield</b><br>
+        Liveability: <b>5.1/10</b><br>
+        Affordability: 0.65<br>
+        Walkability: 0.04<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_33ada537dd20673df293138f0f430376 = L.circleMarker(
+                [-37.9574, 145.0569],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.230769230769226, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_33ada537dd20673df293138f0f430376.bindTooltip(
+                `<div>
+                     
+        <b>Cheltenham</b><br>
+        Liveability: <b>5.6/10</b><br>
+        Affordability: 0.75<br>
+        Walkability: 0.05<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.62
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e1fa1eda4ba6ec00032787571643fe2d = L.circleMarker(
+                [-37.9254, 145.1198],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.596153846153843, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_e1fa1eda4ba6ec00032787571643fe2d.bindTooltip(
+                `<div>
+                     
+        <b>Clayton</b><br>
+        Liveability: <b>5.0/10</b><br>
+        Affordability: 0.63<br>
+        Walkability: 0.07<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.48
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6008c20138872cdd142a4400df1d2b6f = L.circleMarker(
+                [-37.7437, 144.9643],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.96153846153846, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_6008c20138872cdd142a4400df1d2b6f.bindTooltip(
+                `<div>
+                     
+        <b>Coburg</b><br>
+        Liveability: <b>5.5/10</b><br>
+        Affordability: 0.76<br>
+        Walkability: 0.10<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.52
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_23e5a90c42a6b1937ff4650033370c0f = L.circleMarker(
+                [-37.803, 144.987],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_23e5a90c42a6b1937ff4650033370c0f.bindTooltip(
+                `<div>
+                     
+        <b>Collingwood</b><br>
+        Liveability: <b>5.1/10</b><br>
+        Affordability: 0.46<br>
+        Walkability: 0.32<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.52
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0ea50dbb02290a7b000845aaca0d6a9c = L.circleMarker(
+                [-37.6003, 144.946],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.06730769230769, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_0ea50dbb02290a7b000845aaca0d6a9c.bindTooltip(
+                `<div>
+                     
+        <b>Craigieburn</b><br>
+        Liveability: <b>5.1/10</b><br>
+        Affordability: 0.90<br>
+        Walkability: 0.00<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_73ddd83a3ac9f671406de95168e03376 = L.circleMarker(
+                [-38.0999, 145.2838],
+                {"bubblingMouseEvents": true, "color": "#08519c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08519c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.173076923076923, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_73ddd83a3ac9f671406de95168e03376.bindTooltip(
+                `<div>
+                     
+        <b>Cranbourne</b><br>
+        Liveability: <b>5.7/10</b><br>
+        Affordability: 0.88<br>
+        Walkability: 0.03<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.49
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_870172f52782e360871bb37df31c2685 = L.circleMarker(
+                [-37.9875, 145.2147],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.53846153846154, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_870172f52782e360871bb37df31c2685.bindTooltip(
+                `<div>
+                     
+        <b>Dandenong</b><br>
+        Liveability: <b>5.2/10</b><br>
+        Affordability: 0.71<br>
+        Walkability: 0.06<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.43
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d2e42efb5c37a7e2f3be8f84d5f246c = L.circleMarker(
+                [-37.814, 144.947],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.20192307692308, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_2d2e42efb5c37a7e2f3be8f84d5f246c.bindTooltip(
+                `<div>
+                     
+        <b>Docklands</b><br>
+        Liveability: <b>5.1/10</b><br>
+        Affordability: 0.23<br>
+        Walkability: 0.56<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.69
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_acc17e224905627350688636761041c9 = L.circleMarker(
+                [-37.7858, 145.1265],
+                {"bubblingMouseEvents": true, "color": "#c6dbef", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c6dbef", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.375000000000004, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_acc17e224905627350688636761041c9.bindTooltip(
+                `<div>
+                     
+        <b>Doncaster</b><br>
+        Liveability: <b>4.7/10</b><br>
+        Affordability: 0.62<br>
+        Walkability: 0.04<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.32
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5d146a6262cacb1df5892029ddb0c68 = L.circleMarker(
+                [-37.7139, 145.148],
+                {"bubblingMouseEvents": true, "color": "#08306b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08306b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.259615384615383, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_e5d146a6262cacb1df5892029ddb0c68.bindTooltip(
+                `<div>
+                     
+        <b>Eltham</b><br>
+        Liveability: <b>6.0/10</b><br>
+        Affordability: 0.94<br>
+        Walkability: 0.05<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.55
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e96b502d81ba01ddccb84354bddabaa = L.circleMarker(
+                [-37.8793, 144.9849],
+                {"bubblingMouseEvents": true, "color": "#f7fbff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f7fbff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_5e96b502d81ba01ddccb84354bddabaa.bindTooltip(
+                `<div>
+                     
+        <b>Elwood</b><br>
+        Liveability: <b>4.0/10</b><br>
+        Affordability: 0.35<br>
+        Walkability: 0.08<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.37
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cd9a5538c202ede16997fd6059ef3046 = L.circleMarker(
+                [-37.7518, 144.915],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.567307692307693, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_cd9a5538c202ede16997fd6059ef3046.bindTooltip(
+                `<div>
+                     
+        <b>Essendon</b><br>
+        Liveability: <b>5.6/10</b><br>
+        Affordability: 0.80<br>
+        Walkability: 0.02<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.60
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1859c67121251de2df3ed5e83139b66 = L.circleMarker(
+                [-37.799, 144.9782],
+                {"bubblingMouseEvents": true, "color": "#08519c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08519c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.442307692307693, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_c1859c67121251de2df3ed5e83139b66.bindTooltip(
+                `<div>
+                     
+        <b>Fitzroy</b><br>
+        Liveability: <b>5.7/10</b><br>
+        Affordability: 0.52<br>
+        Walkability: 0.48<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.63
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_040300c252b4f0188b1beb0b53ef84b8 = L.circleMarker(
+                [-37.787, 144.9782],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.634615384615383, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_040300c252b4f0188b1beb0b53ef84b8.bindTooltip(
+                `<div>
+                     
+        <b>Fitzroy North</b><br>
+        Liveability: <b>5.6/10</b><br>
+        Affordability: 0.71<br>
+        Walkability: 0.25<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.49
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c848b9993c6d1c59a40ffdd1c455f7ae = L.circleMarker(
+                [-37.7998, 144.8989],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.40384615384615, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_c848b9993c6d1c59a40ffdd1c455f7ae.bindTooltip(
+                `<div>
+                     
+        <b>Footscray</b><br>
+        Liveability: <b>5.1/10</b><br>
+        Affordability: 0.58<br>
+        Walkability: 0.14<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.56
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_233ddad8ad48d76983fa31493792e0f1 = L.circleMarker(
+                [-38.1432, 145.1254],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.75, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_233ddad8ad48d76983fa31493792e0f1.bindTooltip(
+                `<div>
+                     
+        <b>Frankston</b><br>
+        Liveability: <b>5.3/10</b><br>
+        Affordability: 0.71<br>
+        Walkability: 0.03<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.60
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_43a559fb0c45f67ef5a648fd3b955e8e = L.circleMarker(
+                [-37.8784, 145.1649],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.221153846153847, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_43a559fb0c45f67ef5a648fd3b955e8e.bindTooltip(
+                `<div>
+                     
+        <b>Glen Waverley</b><br>
+        Liveability: <b>5.4/10</b><br>
+        Affordability: 0.69<br>
+        Walkability: 0.07<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.62
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_adf441bdba4ef804d293a64b23804cdd = L.circleMarker(
+                [-37.7033, 144.9283],
+                {"bubblingMouseEvents": true, "color": "#08519c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08519c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.644230769230766, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_adf441bdba4ef804d293a64b23804cdd.bindTooltip(
+                `<div>
+                     
+        <b>Glenroy</b><br>
+        Liveability: <b>5.8/10</b><br>
+        Affordability: 0.78<br>
+        Walkability: 0.00<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.77
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77ed90b5e8649a028f661779a7f62388 = L.circleMarker(
+                [-37.7038, 145.1015],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.028846153846153, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_77ed90b5e8649a028f661779a7f62388.bindTooltip(
+                `<div>
+                     
+        <b>Greensborough</b><br>
+        Liveability: <b>5.5/10</b><br>
+        Affordability: 0.81<br>
+        Walkability: 0.04<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.50
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e94114f2a26e0b06224ae9ed01b14e46 = L.circleMarker(
+                [-37.8225, 145.0341],
+                {"bubblingMouseEvents": true, "color": "#08519c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08519c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.038461538461537, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_e94114f2a26e0b06224ae9ed01b14e46.bindTooltip(
+                `<div>
+                     
+        <b>Hawthorn</b><br>
+        Liveability: <b>5.7/10</b><br>
+        Affordability: 0.69<br>
+        Walkability: 0.10<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.76
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5e7a26c8a1e88ee8bb12cf4e96eb1d88 = L.circleMarker(
+                [-37.7558, 145.0668],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.480769230769226, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_5e7a26c8a1e88ee8bb12cf4e96eb1d88.bindTooltip(
+                `<div>
+                     
+        <b>Heidelberg</b><br>
+        Liveability: <b>5.3/10</b><br>
+        Affordability: 0.74<br>
+        Walkability: 0.05<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.47
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dddf1880478c71b7224ffccd1c2fc482 = L.circleMarker(
+                [-37.7687, 145.0457],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.692307692307693, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_dddf1880478c71b7224ffccd1c2fc482.bindTooltip(
+                `<div>
+                     
+        <b>Ivanhoe</b><br>
+        Liveability: <b>5.5/10</b><br>
+        Affordability: 0.86<br>
+        Walkability: 0.03<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.39
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e60ade6894fbaf15968c9350d361d51 = L.circleMarker(
+                [-37.8053, 145.0363],
+                {"bubblingMouseEvents": true, "color": "#c6dbef", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c6dbef", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.509615384615383, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_2e60ade6894fbaf15968c9350d361d51.bindTooltip(
+                `<div>
+                     
+        <b>Kew</b><br>
+        Liveability: <b>4.7/10</b><br>
+        Affordability: 0.60<br>
+        Walkability: 0.04<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.39
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e5bd8ce2fe2cdaf7a01c56576d5769e = L.circleMarker(
+                [-37.8569, 145.03],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.826923076923077, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_8e5bd8ce2fe2cdaf7a01c56576d5769e.bindTooltip(
+                `<div>
+                     
+        <b>Malvern</b><br>
+        Liveability: <b>5.5/10</b><br>
+        Affordability: 0.71<br>
+        Walkability: 0.02<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.71
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8acf55d73a378fc46d3abfb6b2d01d5c = L.circleMarker(
+                [-37.8136, 144.9631],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.682692307692307, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_8acf55d73a378fc46d3abfb6b2d01d5c.bindTooltip(
+                `<div>
+                     
+        <b>Melbourne</b><br>
+        Liveability: <b>5.3/10</b><br>
+        Affordability: 0.00<br>
+        Walkability: 1.00<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.71
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d37a6bff4ece7f53c8ff83b6b7813a26 = L.circleMarker(
+                [-37.9821, 145.0683],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.93269230769231, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_d37a6bff4ece7f53c8ff83b6b7813a26.bindTooltip(
+                `<div>
+                     
+        <b>Mentone</b><br>
+        Liveability: <b>5.1/10</b><br>
+        Affordability: 0.72<br>
+        Walkability: 0.04<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.38
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_925447e4bc1faaf5d879e6b383f93620 = L.circleMarker(
+                [-37.7655, 144.9211],
+                {"bubblingMouseEvents": true, "color": "#08519c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08519c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.913461538461533, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_925447e4bc1faaf5d879e6b383f93620.bindTooltip(
+                `<div>
+                     
+        <b>Moonee Ponds</b><br>
+        Liveability: <b>5.8/10</b><br>
+        Affordability: 0.86<br>
+        Walkability: 0.07<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.55
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_85ad625bc6c405d7106f3372f7a90866 = L.circleMarker(
+                [-37.9281, 145.0618],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.73076923076923, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_85ad625bc6c405d7106f3372f7a90866.bindTooltip(
+                `<div>
+                     
+        <b>Moorabbin</b><br>
+        Liveability: <b>5.0/10</b><br>
+        Affordability: 0.64<br>
+        Walkability: 0.02<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.55
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cc5672359660f4bc4b0d99bcbcf32869 = L.circleMarker(
+                [-38.029, 145.302],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.471153846153847, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_cc5672359660f4bc4b0d99bcbcf32869.bindTooltip(
+                `<div>
+                     
+        <b>Narre Warren</b><br>
+        Liveability: <b>5.2/10</b><br>
+        Affordability: 0.77<br>
+        Walkability: 0.01<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.37
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f197f24d7a172898f1215baeaa85a8a1 = L.circleMarker(
+                [-37.7696, 145.0007],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.692307692307693, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_f197f24d7a172898f1215baeaa85a8a1.bindTooltip(
+                `<div>
+                     
+        <b>Northcote</b><br>
+        Liveability: <b>5.5/10</b><br>
+        Affordability: 0.69<br>
+        Walkability: 0.10<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.62
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_970bf3625e9f077f57d4e0b6321219aa = L.circleMarker(
+                [-37.9001, 145.0883],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.73076923076923, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_970bf3625e9f077f57d4e0b6321219aa.bindTooltip(
+                `<div>
+                     
+        <b>Oakleigh</b><br>
+        Liveability: <b>5.0/10</b><br>
+        Affordability: 0.67<br>
+        Walkability: 0.06<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.43
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e639dbebfa7c8b4594afbc76bdd48b4b = L.circleMarker(
+                [-38.0712, 145.4875],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.28846153846154, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_e639dbebfa7c8b4594afbc76bdd48b4b.bindTooltip(
+                `<div>
+                     
+        <b>Pakenham</b><br>
+        Liveability: <b>5.4/10</b><br>
+        Affordability: 0.88<br>
+        Walkability: 0.02<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f1f1363c5c9f819d9353bffe2da8077f = L.circleMarker(
+                [-37.729, 144.938],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.230769230769226, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_f1f1363c5c9f819d9353bffe2da8077f.bindTooltip(
+                `<div>
+                     
+        <b>Pascoe Vale</b><br>
+        Liveability: <b>5.6/10</b><br>
+        Affordability: 0.76<br>
+        Walkability: 0.05<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.61
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_380c063198c4fdb0887f8f086c444419 = L.circleMarker(
+                [-37.8922, 144.7472],
+                {"bubblingMouseEvents": true, "color": "#08519c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08519c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.04807692307692, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_380c063198c4fdb0887f8f086c444419.bindTooltip(
+                `<div>
+                     
+        <b>Point Cook</b><br>
+        Liveability: <b>5.8/10</b><br>
+        Affordability: 1.00<br>
+        Walkability: 0.03<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.56
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dfdfbb1b9d915c4b1c97bc1f27d53c43 = L.circleMarker(
+                [-37.8362, 144.9284],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.41346153846154, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_dfdfbb1b9d915c4b1c97bc1f27d53c43.bindTooltip(
+                `<div>
+                     
+        <b>Port Melbourne</b><br>
+        Liveability: <b>5.3/10</b><br>
+        Affordability: 0.69<br>
+        Walkability: 0.04<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.57
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_853fbfd2a763d24865482bdc947ea169 = L.circleMarker(
+                [-37.8497, 144.992],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.499999999999996, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_853fbfd2a763d24865482bdc947ea169.bindTooltip(
+                `<div>
+                     
+        <b>Prahran</b><br>
+        Liveability: <b>5.6/10</b><br>
+        Affordability: 0.56<br>
+        Walkability: 0.16<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.90
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e37cd52b475e2cf381eec954a5ba1953 = L.circleMarker(
+                [-37.7445, 145.0127],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.06730769230769, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_e37cd52b475e2cf381eec954a5ba1953.bindTooltip(
+                `<div>
+                     
+        <b>Preston</b><br>
+        Liveability: <b>5.1/10</b><br>
+        Affordability: 0.60<br>
+        Walkability: 0.09<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.57
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7aaa47674abf11a6ef632dd44262a6b6 = L.circleMarker(
+                [-37.7172, 145.0073],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.134615384615381, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_7aaa47674abf11a6ef632dd44262a6b6.bindTooltip(
+                `<div>
+                     
+        <b>Reservoir</b><br>
+        Liveability: <b>5.1/10</b><br>
+        Affordability: 0.63<br>
+        Walkability: 0.02<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.59
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2965d90660734445082c8b801d981e32 = L.circleMarker(
+                [-37.8183, 144.9981],
+                {"bubblingMouseEvents": true, "color": "#9ecae1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9ecae1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.192307692307692, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_2965d90660734445082c8b801d981e32.bindTooltip(
+                `<div>
+                     
+        <b>Richmond</b><br>
+        Liveability: <b>5.0/10</b><br>
+        Affordability: 0.53<br>
+        Walkability: 0.18<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.49
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dad365c43fb96171bbed6f0c2511e1aa = L.circleMarker(
+                [-37.8058, 144.8865],
+                {"bubblingMouseEvents": true, "color": "#08519c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08519c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.71153846153846, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_dad365c43fb96171bbed6f0c2511e1aa.bindTooltip(
+                `<div>
+                     
+        <b>Seddon</b><br>
+        Liveability: <b>5.8/10</b><br>
+        Affordability: 0.86<br>
+        Walkability: 0.15<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.42
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_73655726e68fada0b72d46e1e0c9c8f9 = L.circleMarker(
+                [-37.8305, 144.9592],
+                {"bubblingMouseEvents": true, "color": "#041f4a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#041f4a", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_73655726e68fada0b72d46e1e0c9c8f9.bindTooltip(
+                `<div>
+                     
+        <b>South Melbourne</b><br>
+        Liveability: <b>6.1/10</b><br>
+        Affordability: 0.67<br>
+        Walkability: 0.32<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.81
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0877bbac2933ab4ba20a6ef39eb6cd68 = L.circleMarker(
+                [-37.6523, 145.093],
+                {"bubblingMouseEvents": true, "color": "#deebf7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#deebf7", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.884615384615387, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_0877bbac2933ab4ba20a6ef39eb6cd68.bindTooltip(
+                `<div>
+                     
+        <b>South Morang</b><br>
+        Liveability: <b>4.3/10</b><br>
+        Affordability: 0.69<br>
+        Walkability: 0.02<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.17
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dea6e7f3138fa8ade27942f6d41d8b7b = L.circleMarker(
+                [-37.8388, 144.9929],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.884615384615387, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_dea6e7f3138fa8ade27942f6d41d8b7b.bindTooltip(
+                `<div>
+                     
+        <b>South Yarra</b><br>
+        Liveability: <b>5.4/10</b><br>
+        Affordability: 0.58<br>
+        Walkability: 0.17<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.68
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_953e248329fa06180454b243609eba83 = L.circleMarker(
+                [-37.823, 144.963],
+                {"bubblingMouseEvents": true, "color": "#9ecae1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9ecae1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.192307692307692, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_953e248329fa06180454b243609eba83.bindTooltip(
+                `<div>
+                     
+        <b>Southbank</b><br>
+        Liveability: <b>5.0/10</b><br>
+        Affordability: 0.06<br>
+        Walkability: 0.85<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.54
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fd41133f8139200b482c17a9a15a86d5 = L.circleMarker(
+                [-37.8582, 144.9741],
+                {"bubblingMouseEvents": true, "color": "#c6dbef", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c6dbef", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.163461538461537, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_fd41133f8139200b482c17a9a15a86d5.bindTooltip(
+                `<div>
+                     
+        <b>St Kilda</b><br>
+        Liveability: <b>4.5/10</b><br>
+        Affordability: 0.43<br>
+        Walkability: 0.09<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2348ea8ecbe3c88776dd3413f644140f = L.circleMarker(
+                [-37.8666, 144.996],
+                {"bubblingMouseEvents": true, "color": "#6baed6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.740384615384617, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_2348ea8ecbe3c88776dd3413f644140f.bindTooltip(
+                `<div>
+                     
+        <b>St Kilda East</b><br>
+        Liveability: <b>5.2/10</b><br>
+        Affordability: 0.61<br>
+        Walkability: 0.07<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.64
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_52dd6f0451f85752d2e74ef305ffd150 = L.circleMarker(
+                [-37.5767, 144.7267],
+                {"bubblingMouseEvents": true, "color": "#08519c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08519c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.442307692307693, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_52dd6f0451f85752d2e74ef305ffd150.bindTooltip(
+                `<div>
+                     
+        <b>Sunbury</b><br>
+        Liveability: <b>5.7/10</b><br>
+        Affordability: 0.89<br>
+        Walkability: 0.02<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.50
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7e307d547ca75bb4811316cfa80f99d = L.circleMarker(
+                [-37.7886, 144.8327],
+                {"bubblingMouseEvents": true, "color": "#c6dbef", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c6dbef", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.644230769230772, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_d7e307d547ca75bb4811316cfa80f99d.bindTooltip(
+                `<div>
+                     
+        <b>Sunshine</b><br>
+        Liveability: <b>4.7/10</b><br>
+        Affordability: 0.56<br>
+        Walkability: 0.05<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.45
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0dacf171b00643d3e80c2b4f82997da2 = L.circleMarker(
+                [-37.853, 144.689],
+                {"bubblingMouseEvents": true, "color": "#9ecae1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9ecae1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.115384615384613, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_0dacf171b00643d3e80c2b4f82997da2.bindTooltip(
+                `<div>
+                     
+        <b>Tarneit</b><br>
+        Liveability: <b>4.8/10</b><br>
+        Affordability: 0.90<br>
+        Walkability: 0.00<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.55
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2553613b9b5148389756fbe82a083d2 = L.circleMarker(
+                [-37.7545, 145.0057],
+                {"bubblingMouseEvents": true, "color": "#08306b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08306b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.721153846153843, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_b2553613b9b5148389756fbe82a083d2.bindTooltip(
+                `<div>
+                     
+        <b>Thornbury</b><br>
+        Liveability: <b>5.9/10</b><br>
+        Affordability: 0.79<br>
+        Walkability: 0.09<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.74
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9de351a13eac17063884d7a24353aa69 = L.circleMarker(
+                [-37.8389, 145.0145],
+                {"bubblingMouseEvents": true, "color": "#deebf7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#deebf7", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.490384615384617, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_9de351a13eac17063884d7a24353aa69.bindTooltip(
+                `<div>
+                     
+        <b>Toorak</b><br>
+        Liveability: <b>4.4/10</b><br>
+        Affordability: 0.43<br>
+        Walkability: 0.02<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.54
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4bc3398ba486f8bc4364242a1a7e11d2 = L.circleMarker(
+                [-37.902, 144.6621],
+                {"bubblingMouseEvents": true, "color": "#9ecae1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9ecae1", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.51923076923077, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_4bc3398ba486f8bc4364242a1a7e11d2.bindTooltip(
+                `<div>
+                     
+        <b>Werribee</b><br>
+        Liveability: <b>4.9/10</b><br>
+        Affordability: 0.80<br>
+        Walkability: 0.03<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9240ff71f07e36d7f9c9de8d1afb2a07 = L.circleMarker(
+                [-37.8607, 144.8985],
+                {"bubblingMouseEvents": true, "color": "#2171b5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2171b5", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.701923076923077, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_9240ff71f07e36d7f9c9de8d1afb2a07.bindTooltip(
+                `<div>
+                     
+        <b>Williamstown</b><br>
+        Liveability: <b>5.6/10</b><br>
+        Affordability: 0.92<br>
+        Walkability: 0.03<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.58
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e16e1667a6674e873ce9749672f8ab4 = L.circleMarker(
+                [-37.8558, 144.991],
+                {"bubblingMouseEvents": true, "color": "#4292c6", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4292c6", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.807692307692308, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_1e16e1667a6674e873ce9749672f8ab4.bindTooltip(
+                `<div>
+                     
+        <b>Windsor</b><br>
+        Liveability: <b>5.2/10</b><br>
+        Affordability: 0.56<br>
+        Walkability: 0.13<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.67
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_69b177929fc42c9a2eac467584d55c82 = L.circleMarker(
+                [-37.8167, 144.8892],
+                {"bubblingMouseEvents": true, "color": "#08306b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08306b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.46153846153846, "stroke": true, "weight": 1.5}
+            ).addTo(map_d77664df19b852601eb13e5b7050d8c5);
+        
+    
+            circle_marker_69b177929fc42c9a2eac467584d55c82.bindTooltip(
+                `<div>
+                     
+        <b>Yarraville</b><br>
+        Liveability: <b>6.0/10</b><br>
+        Affordability: 0.87<br>
+        Walkability: 0.07<br>
+        Transit on-time: N/A<br>
+        Avg delay: N/A<br>
+        Honesty score: 0.69
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

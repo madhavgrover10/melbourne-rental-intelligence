@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b292a106c76dfab57f09956e7b54606d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position:fixed;bottom:30px;left:30px;z-index:1000;
+                background:white;padding:12px 16px;border-radius:8px;
+                box-shadow:0 2px 8px rgba(0,0,0,0.15);font-family:sans-serif;font-size:12px;">
+        <b>Value gap (liveability vs rent)</b><br>
+        <span style="color:#1a9850">●</span> Hidden gem<br>
+        <span style="color:#b8b800">●</span> Fair value<br>
+        <span style="color:#d73027">●</span> Overpriced trap<br>
+        <i style="color:#888;font-size:11px">Circle size = gap magnitude</i>
+    </div>
+    
+    
+            <div class="folium-map" id="map_b292a106c76dfab57f09956e7b54606d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b292a106c76dfab57f09956e7b54606d = L.map(
+                "map_b292a106c76dfab57f09956e7b54606d",
+                {
+                    center: [-37.8136, 144.9631],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_09259ddc13903e0410378c3de026a89f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_09259ddc13903e0410378c3de026a89f.addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            var circle_marker_e489b8afab863c24b37c9a4db0884ab1 = L.circleMarker(
+                [-37.8042, 144.9999],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.507157036882248, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_e489b8afab863c24b37c9a4db0884ab1.bindTooltip(
+                `<div>
+                     
+        <b>Abbotsford</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.17<br>
+        Liveability: 5.7/10<br>
+        Median rent: $1960/wk<br>
+        Honesty score: 0.67
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_17f01e76931564a64429ad224224e14a = L.circleMarker(
+                [-37.8425, 144.9549],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.478528889353255, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_17f01e76931564a64429ad224224e14a.bindTooltip(
+                `<div>
+                     
+        <b>Albert Park</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.44<br>
+        Liveability: 5.2/10<br>
+        Median rent: $2745/wk<br>
+        Honesty score: 0.54
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f76088e7bb02a1b6e167d761a8fb901 = L.circleMarker(
+                [-37.8555, 145.0176],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.313760317626164, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_5f76088e7bb02a1b6e167d761a8fb901.bindTooltip(
+                `<div>
+                     
+        <b>Armadale</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.50<br>
+        Liveability: 5.1/10<br>
+        Median rent: $2587/wk<br>
+        Honesty score: 0.45
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f96180491685b68a822be36a82fac74 = L.circleMarker(
+                [-37.7772, 144.9178],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.238533068644866, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_3f96180491685b68a822be36a82fac74.bindTooltip(
+                `<div>
+                     
+        <b>Ascot Vale</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.22<br>
+        Liveability: 5.4/10<br>
+        Median rent: $1643/wk<br>
+        Honesty score: 0.40
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f32d773234002d25274a3ab66e861a88 = L.circleMarker(
+                [-37.8671, 144.993],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.14899174589907, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_f32d773234002d25274a3ab66e861a88.bindTooltip(
+                `<div>
+                     
+        <b>Balaclava</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.56<br>
+        Liveability: 4.6/10<br>
+        Median rent: $1914/wk<br>
+        Honesty score: 0.38
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fcbb94b9b0ebf1975e7cabf949bfce64 = L.circleMarker(
+                [-37.9191, 145.036],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.432661163932714, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_fcbb94b9b0ebf1975e7cabf949bfce64.bindTooltip(
+                `<div>
+                     
+        <b>Bentleigh</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.37<br>
+        Liveability: 5.0/10<br>
+        Median rent: $1890/wk<br>
+        Honesty score: 0.55
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d5bbe387a2812191ee2e7aae39330f4 = L.circleMarker(
+                [-38.0358, 145.353],
+                {"bubblingMouseEvents": true, "color": "#1a9850", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.552293386271028, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_8d5bbe387a2812191ee2e7aae39330f4.bindTooltip(
+                `<div>
+                     
+        <b>Berwick</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.72<br>
+        Liveability: 5.8/10<br>
+        Median rent: $1435/wk<br>
+        Honesty score: 0.51
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_91e00cddfc5180a303bcfd320bb8be77 = L.marker(
+                [-38.0358, 145.353],
+                {
+}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            var div_icon_e749050dc222bcb2fd2fa6be5f8d05db = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:600;color:#006837;white-space:nowrap;text-shadow:0 0 3px white;\"\u003eBerwick\u003c/div\u003e",
+  "iconSize": [120, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_91e00cddfc5180a303bcfd320bb8be77.setIcon(div_icon_e749050dc222bcb2fd2fa6be5f8d05db);
+            
+    
+            var circle_marker_6ac9ae23347f0b88a76c2411691a08ae = L.circleMarker(
+                [-37.8192, 145.1218],
+                {"bubblingMouseEvents": true, "color": "#fee08b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.969909100407481, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_6ac9ae23347f0b88a76c2411691a08ae.bindTooltip(
+                `<div>
+                     
+        <b>Box Hill</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.27<br>
+        Liveability: 4.9/10<br>
+        Median rent: $1713/wk<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a829c297714c1cd919f65a7f7ce5bbe5 = L.circleMarker(
+                [-37.9053, 144.9856],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.38898756660746, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_a829c297714c1cd919f65a7f7ce5bbe5.bindTooltip(
+                `<div>
+                     
+        <b>Brighton</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.78<br>
+        Liveability: 4.9/10<br>
+        Median rent: $2986/wk<br>
+        Honesty score: 0.49
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_24e63ee8e8695f894cbefe84cc5f49bc = L.marker(
+                [-37.9053, 144.9856],
+                {
+}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            var div_icon_0453fc27189c8780d96f4e1ce51be258 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:600;color:#8b0000;white-space:nowrap;text-shadow:0 0 3px white;\"\u003eBrighton\u003c/div\u003e",
+  "iconSize": [120, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_24e63ee8e8695f894cbefe84cc5f49bc.setIcon(div_icon_0453fc27189c8780d96f4e1ce51be258);
+            
+    
+            var circle_marker_43d2e1d8afdb0d04157cbb025ef89f5c = L.circleMarker(
+                [-37.6815, 144.9208],
+                {"bubblingMouseEvents": true, "color": "#ffffbf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.418347090168217, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_43d2e1d8afdb0d04157cbb025ef89f5c.bindTooltip(
+                `<div>
+                     
+        <b>Broadmeadows</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.03<br>
+        Liveability: 4.5/10<br>
+        Median rent: $1248/wk<br>
+        Honesty score: 0.43
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1444628dd2533b63bc803f27ec71755d = L.circleMarker(
+                [-37.7666, 144.9604],
+                {"bubblingMouseEvents": true, "color": "#ffffbf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.627520635252324, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_1444628dd2533b63bc803f27ec71755d.bindTooltip(
+                `<div>
+                     
+        <b>Brunswick</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.04<br>
+        Liveability: 5.4/10<br>
+        Median rent: $1900/wk<br>
+        Honesty score: 0.58
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_680be936720c40f4f74c1c474120ee72 = L.circleMarker(
+                [-37.6982, 145.06],
+                {"bubblingMouseEvents": true, "color": "#a6d96a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.17908264549159, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_680be936720c40f4f74c1c474120ee72.bindTooltip(
+                `<div>
+                     
+        <b>Bundoora</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.29<br>
+        Liveability: 5.3/10<br>
+        Median rent: $1465/wk<br>
+        Honesty score: 0.58
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fd93547b0765f0005a43653a73f1ea5c = L.circleMarker(
+                [-37.8328, 145.058],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.432661163932714, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_fd93547b0765f0005a43653a73f1ea5c.bindTooltip(
+                `<div>
+                     
+        <b>Camberwell</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.37<br>
+        Liveability: 5.2/10<br>
+        Median rent: $2583/wk<br>
+        Honesty score: 0.57
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e3e15370766b898498160f910700076 = L.circleMarker(
+                [-37.7941, 144.9672],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.925504127050466, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_2e3e15370766b898498160f910700076.bindTooltip(
+                `<div>
+                     
+        <b>Carlton</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.20<br>
+        Liveability: 5.6/10<br>
+        Median rent: $1810/wk<br>
+        Honesty score: 0.70
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c3c620b4987218f50b8a1acef10cb3c3 = L.circleMarker(
+                [-37.8772, 145.023],
+                {"bubblingMouseEvents": true, "color": "#fee08b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.134677672134574, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_c3c620b4987218f50b8a1acef10cb3c3.bindTooltip(
+                `<div>
+                     
+        <b>Caulfield</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.21<br>
+        Liveability: 5.1/10<br>
+        Median rent: $1837/wk<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f87130ff64225f4bf1231bf1c06d50dd = L.circleMarker(
+                [-37.9574, 145.0569],
+                {"bubblingMouseEvents": true, "color": "#a6d96a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.223487618848605, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_f87130ff64225f4bf1231bf1c06d50dd.bindTooltip(
+                `<div>
+                     
+        <b>Cheltenham</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.36<br>
+        Liveability: 5.6/10<br>
+        Median rent: $1639/wk<br>
+        Honesty score: 0.62
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d0d5b085ffe32c4224be2e7e11c4803 = L.circleMarker(
+                [-37.9254, 145.1198],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.835231428272907, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_6d0d5b085ffe32c4224be2e7e11c4803.bindTooltip(
+                `<div>
+                     
+        <b>Clayton</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.06<br>
+        Liveability: 5.0/10<br>
+        Median rent: $1402/wk<br>
+        Honesty score: 0.48
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a57283cf7175dfffd0b9985df786d877 = L.circleMarker(
+                [-37.7437, 144.9643],
+                {"bubblingMouseEvents": true, "color": "#a6d96a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.85100825410093, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_a57283cf7175dfffd0b9985df786d877.bindTooltip(
+                `<div>
+                     
+        <b>Coburg</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.40<br>
+        Liveability: 5.5/10<br>
+        Median rent: $1531/wk<br>
+        Honesty score: 0.52
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eae53f76f5c6cff8d8afaf8d2aa4e57e = L.circleMarker(
+                [-37.803, 144.987],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.269355344269147, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_eae53f76f5c6cff8d8afaf8d2aa4e57e.bindTooltip(
+                `<div>
+                     
+        <b>Collingwood</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.43<br>
+        Liveability: 5.1/10<br>
+        Median rent: $2125/wk<br>
+        Honesty score: 0.52
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_69c42125a280af58053851f75a3e2028 = L.circleMarker(
+                [-37.6003, 144.946],
+                {"bubblingMouseEvents": true, "color": "#a6d96a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.969909100407481, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_69c42125a280af58053851f75a3e2028.bindTooltip(
+                `<div>
+                     
+        <b>Craigieburn</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.27<br>
+        Liveability: 5.1/10<br>
+        Median rent: $1235/wk<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_60d951c75712cfd66016454fdf133cfc = L.circleMarker(
+                [-38.0999, 145.2838],
+                {"bubblingMouseEvents": true, "color": "#006837", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.91119005328597, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_60d951c75712cfd66016454fdf133cfc.bindTooltip(
+                `<div>
+                     
+        <b>Cranbourne</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.81<br>
+        Liveability: 5.7/10<br>
+        Median rent: $1179/wk<br>
+        Honesty score: 0.49
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_66a22eab9ac31d89a3a647140b835f9a = L.marker(
+                [-38.0999, 145.2838],
+                {
+}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            var div_icon_7b468c8f0bad47f07f41834ae1027bae = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:600;color:#006837;white-space:nowrap;text-shadow:0 0 3px white;\"\u003eCranbourne\u003c/div\u003e",
+  "iconSize": [120, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_66a22eab9ac31d89a3a647140b835f9a.setIcon(div_icon_7b468c8f0bad47f07f41834ae1027bae);
+            
+    
+            var circle_marker_7c84404957f7a78454813f8844d533d8 = L.circleMarker(
+                [-37.9875, 145.2147],
+                {"bubblingMouseEvents": true, "color": "#a6d96a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.85100825410093, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_7c84404957f7a78454813f8844d533d8.bindTooltip(
+                `<div>
+                     
+        <b>Dandenong</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.40<br>
+        Liveability: 5.2/10<br>
+        Median rent: $1182/wk<br>
+        Honesty score: 0.43
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7686bfe097b191210c3254c4403a0aab = L.circleMarker(
+                [-37.814, 144.947],
+                {"bubblingMouseEvents": true, "color": "#f46d43", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.985685926235504, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_7686bfe097b191210c3254c4403a0aab.bindTooltip(
+                `<div>
+                     
+        <b>Docklands</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.61<br>
+        Liveability: 5.1/10<br>
+        Median rent: $3471/wk<br>
+        Honesty score: 0.69
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a42204a403534448e03160bb31f0d37 = L.circleMarker(
+                [-37.7858, 145.1265],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.522933862710271, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_8a42204a403534448e03160bb31f0d37.bindTooltip(
+                `<div>
+                     
+        <b>Doncaster</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.51<br>
+        Liveability: 4.7/10<br>
+        Median rent: $1895/wk<br>
+        Honesty score: 0.32
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9db2a7442629008fa0e72c51df2e5977 = L.circleMarker(
+                [-37.7139, 145.148],
+                {"bubblingMouseEvents": true, "color": "#1a9850", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.19485947131961, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_9db2a7442629008fa0e72c51df2e5977.bindTooltip(
+                `<div>
+                     
+        <b>Eltham</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.63<br>
+        Liveability: 6.0/10<br>
+        Median rent: $1601/wk<br>
+        Honesty score: 0.55
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d8129f865b4e6df1e4fe20fb1568021 = L.circleMarker(
+                [-37.8793, 144.9849],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.120363598370076, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_2d8129f865b4e6df1e4fe20fb1568021.bindTooltip(
+                `<div>
+                     
+        <b>Elwood</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.83<br>
+        Liveability: 4.0/10<br>
+        Median rent: $2560/wk<br>
+        Honesty score: 0.37
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5005a835c6adae3203c28f8e162625c5 = L.marker(
+                [-37.8793, 144.9849],
+                {
+}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            var div_icon_3dab5c609265a4e0b8c53c16b3598fd2 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:600;color:#8b0000;white-space:nowrap;text-shadow:0 0 3px white;\"\u003eElwood\u003c/div\u003e",
+  "iconSize": [120, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_5005a835c6adae3203c28f8e162625c5.setIcon(div_icon_3dab5c609265a4e0b8c53c16b3598fd2);
+            
+    
+            var circle_marker_9af49aa3178f1f4feba8029f8c73dda5 = L.circleMarker(
+                [-37.7518, 144.915],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.67192560860934, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_9af49aa3178f1f4feba8029f8c73dda5.bindTooltip(
+                `<div>
+                     
+        <b>Essendon</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.11<br>
+        Liveability: 5.6/10<br>
+        Median rent: $1927/wk<br>
+        Honesty score: 0.60
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d66f8efccc9ff8a0cefffa10cca00693 = L.circleMarker(
+                [-37.799, 144.9782],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.35889666701494, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_d66f8efccc9ff8a0cefffa10cca00693.bindTooltip(
+                `<div>
+                     
+        <b>Fitzroy</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.09<br>
+        Liveability: 5.7/10<br>
+        Median rent: $2289/wk<br>
+        Honesty score: 0.63
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e2fd4e7620642c9892ce3c00a17b448 = L.circleMarker(
+                [-37.787, 144.9782],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.253578518441124, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_0e2fd4e7620642c9892ce3c00a17b448.bindTooltip(
+                `<div>
+                     
+        <b>Fitzroy North</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.09<br>
+        Liveability: 5.6/10<br>
+        Median rent: $2049/wk<br>
+        Honesty score: 0.49
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_132deaffd0eb2b192d0af4a0a00aa329 = L.circleMarker(
+                [-37.7998, 144.8989],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.044404973357016, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_132deaffd0eb2b192d0af4a0a00aa329.bindTooltip(
+                `<div>
+                     
+        <b>Footscray</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.07<br>
+        Liveability: 5.1/10<br>
+        Median rent: $1597/wk<br>
+        Honesty score: 0.56
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0230dc551554474035f3e3b2778d59e2 = L.circleMarker(
+                [-38.1432, 145.1254],
+                {"bubblingMouseEvents": true, "color": "#a6d96a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.641834709016823, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_0230dc551554474035f3e3b2778d59e2.bindTooltip(
+                `<div>
+                     
+        <b>Frankston</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.39<br>
+        Liveability: 5.3/10<br>
+        Median rent: $1349/wk<br>
+        Honesty score: 0.60
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_33b6a1ea57ca9a2bff93009929ff3b68 = L.circleMarker(
+                [-37.8784, 145.1649],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.522202486678507, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_33b6a1ea57ca9a2bff93009929ff3b68.bindTooltip(
+                `<div>
+                     
+        <b>Glen Waverley</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.04<br>
+        Liveability: 5.4/10<br>
+        Median rent: $1875/wk<br>
+        Honesty score: 0.62
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18ce2dbbd8272fabe5f6ee16c0ab6f47 = L.circleMarker(
+                [-37.7033, 144.9283],
+                {"bubblingMouseEvents": true, "color": "#006837", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.91119005328597, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_18ce2dbbd8272fabe5f6ee16c0ab6f47.bindTooltip(
+                `<div>
+                     
+        <b>Glenroy</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.81<br>
+        Liveability: 5.8/10<br>
+        Median rent: $1240/wk<br>
+        Honesty score: 0.77
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_62f3d6b6979f41a9bacf85f36c3672ff = L.marker(
+                [-37.7033, 144.9283],
+                {
+}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            var div_icon_0925bebadd116ea3e39b5bd8e74afecb = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:600;color:#006837;white-space:nowrap;text-shadow:0 0 3px white;\"\u003eGlenroy\u003c/div\u003e",
+  "iconSize": [120, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_62f3d6b6979f41a9bacf85f36c3672ff.setIcon(div_icon_0925bebadd116ea3e39b5bd8e74afecb);
+            
+    
+            var circle_marker_c4f49a09416821861c2cde53076fc2d7 = L.circleMarker(
+                [-37.7038, 145.1015],
+                {"bubblingMouseEvents": true, "color": "#a6d96a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.015776825828024, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_c4f49a09416821861c2cde53076fc2d7.bindTooltip(
+                `<div>
+                     
+        <b>Greensborough</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.34<br>
+        Liveability: 5.5/10<br>
+        Median rent: $1623/wk<br>
+        Honesty score: 0.50
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_799e28d7d23c84f1101a3d67277ea491 = L.circleMarker(
+                [-37.8225, 145.0341],
+                {"bubblingMouseEvents": true, "color": "#ffffbf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.209173545084107, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_799e28d7d23c84f1101a3d67277ea491.bindTooltip(
+                `<div>
+                     
+        <b>Hawthorn</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.01<br>
+        Liveability: 5.7/10<br>
+        Median rent: $2422/wk<br>
+        Honesty score: 0.76
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4a97925614edd2a47564aebd7d3db7b = L.circleMarker(
+                [-37.7558, 145.0668],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.67192560860934, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_e4a97925614edd2a47564aebd7d3db7b.bindTooltip(
+                `<div>
+                     
+        <b>Heidelberg</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.11<br>
+        Liveability: 5.3/10<br>
+        Median rent: $1664/wk<br>
+        Honesty score: 0.47
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1076516e9ae3438b8f0be33e6cfd2860 = L.circleMarker(
+                [-37.7687, 145.0457],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.940549576846724, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_1076516e9ae3438b8f0be33e6cfd2860.bindTooltip(
+                `<div>
+                     
+        <b>Ivanhoe</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.06<br>
+        Liveability: 5.5/10<br>
+        Median rent: $1888/wk<br>
+        Honesty score: 0.39
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bc6d7e2ff5f110a379c7301d64af4913 = L.circleMarker(
+                [-37.8053, 145.0363],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.91119005328597, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_bc6d7e2ff5f110a379c7301d64af4913.bindTooltip(
+                `<div>
+                     
+        <b>Kew</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.81<br>
+        Liveability: 4.7/10<br>
+        Median rent: $2912/wk<br>
+        Honesty score: 0.39
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_30c86f833a6a6ddc117ac8eb6a1dca0c = L.marker(
+                [-37.8053, 145.0363],
+                {
+}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            var div_icon_0f2a28df20a7d67b797d852d849c4182 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:600;color:#8b0000;white-space:nowrap;text-shadow:0 0 3px white;\"\u003eKew\u003c/div\u003e",
+  "iconSize": [120, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_30c86f833a6a6ddc117ac8eb6a1dca0c.setIcon(div_icon_0f2a28df20a7d67b797d852d849c4182);
+            
+    
+            var circle_marker_5c4eb3a8509f4ad67e2f942885be60b6 = L.circleMarker(
+                [-37.8569, 145.03],
+                {"bubblingMouseEvents": true, "color": "#fee08b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.343851217218681, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_5c4eb3a8509f4ad67e2f942885be60b6.bindTooltip(
+                `<div>
+                     
+        <b>Malvern</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.23<br>
+        Liveability: 5.5/10<br>
+        Median rent: $2693/wk<br>
+        Honesty score: 0.71
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_38bbbe9fa4b118932a166f476ce838ad = L.circleMarker(
+                [-37.8136, 144.9631],
+                {"bubblingMouseEvents": true, "color": "#fdae61", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.060181799185038, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_38bbbe9fa4b118932a166f476ce838ad.bindTooltip(
+                `<div>
+                     
+        <b>Melbourne</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.41<br>
+        Liveability: 5.3/10<br>
+        Median rent: $3183/wk<br>
+        Honesty score: 0.71
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7dbea5de7ebb1932f0ec2adbbfc1c1d7 = L.circleMarker(
+                [-37.9821, 145.0683],
+                {"bubblingMouseEvents": true, "color": "#fee08b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.343851217218681, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_7dbea5de7ebb1932f0ec2adbbfc1c1d7.bindTooltip(
+                `<div>
+                     
+        <b>Mentone</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.23<br>
+        Liveability: 5.1/10<br>
+        Median rent: $1809/wk<br>
+        Honesty score: 0.38
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3a71c8a3cb1cf12e9a657f73aca03fdf = L.circleMarker(
+                [-37.7655, 144.9211],
+                {"bubblingMouseEvents": true, "color": "#66bd63", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.000731376031762, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_3a71c8a3cb1cf12e9a657f73aca03fdf.bindTooltip(
+                `<div>
+                     
+        <b>Moonee Ponds</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.48<br>
+        Liveability: 5.8/10<br>
+        Median rent: $1700/wk<br>
+        Honesty score: 0.55
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24f9bd8e7838c81137d6aac3e34bbf8b = L.circleMarker(
+                [-37.9281, 145.0618],
+                {"bubblingMouseEvents": true, "color": "#fee08b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.238533068644866, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_24f9bd8e7838c81137d6aac3e34bbf8b.bindTooltip(
+                `<div>
+                     
+        <b>Moorabbin</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.22<br>
+        Liveability: 5.0/10<br>
+        Median rent: $1742/wk<br>
+        Honesty score: 0.55
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7812078b8f4396450e38de0e7ec3cb7 = L.circleMarker(
+                [-38.029, 145.302],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.716330581966357, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_f7812078b8f4396450e38de0e7ec3cb7.bindTooltip(
+                `<div>
+                     
+        <b>Narre Warren</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.19<br>
+        Liveability: 5.2/10<br>
+        Median rent: $1456/wk<br>
+        Honesty score: 0.37
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b56a634753709b4184e7f58c3716f51 = L.circleMarker(
+                [-37.7696, 145.0007],
+                {"bubblingMouseEvents": true, "color": "#ffffbf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.940549576846724, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_4b56a634753709b4184e7f58c3716f51.bindTooltip(
+                `<div>
+                     
+        <b>Northcote</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.06<br>
+        Liveability: 5.5/10<br>
+        Median rent: $2080/wk<br>
+        Honesty score: 0.62
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_441001846677f58ed36eaf6da18c5c47 = L.circleMarker(
+                [-37.9001, 145.0883],
+                {"bubblingMouseEvents": true, "color": "#ffffbf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.403301640371957, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_441001846677f58ed36eaf6da18c5c47.bindTooltip(
+                `<div>
+                     
+        <b>Oakleigh</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.16<br>
+        Liveability: 5.0/10<br>
+        Median rent: $1689/wk<br>
+        Honesty score: 0.43
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a73c2b0e9f75b248442c1a6ca0e819e6 = L.circleMarker(
+                [-38.0712, 145.4875],
+                {"bubblingMouseEvents": true, "color": "#66bd63", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.567338836067286, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_a73c2b0e9f75b248442c1a6ca0e819e6.bindTooltip(
+                `<div>
+                     
+        <b>Pakenham</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.59<br>
+        Liveability: 5.4/10<br>
+        Median rent: $1220/wk<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_83a4c3f60b770ef429755bbc2ccfe4c7 = L.circleMarker(
+                [-37.729, 144.938],
+                {"bubblingMouseEvents": true, "color": "#66bd63", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.895413227457947, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_83a4c3f60b770ef429755bbc2ccfe4c7.bindTooltip(
+                `<div>
+                     
+        <b>Pascoe Vale</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.47<br>
+        Liveability: 5.6/10<br>
+        Median rent: $1473/wk<br>
+        Honesty score: 0.61
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_acfbad03fc9946cc668e07ee6641352d = L.circleMarker(
+                [-37.8922, 144.7472],
+                {"bubblingMouseEvents": true, "color": "#006837", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.91119005328597, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_acfbad03fc9946cc668e07ee6641352d.bindTooltip(
+                `<div>
+                     
+        <b>Point Cook</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.81<br>
+        Liveability: 5.8/10<br>
+        Median rent: $1308/wk<br>
+        Honesty score: 0.56
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b9068b93b555d11861dfdfb84d44520f = L.marker(
+                [-37.8922, 144.7472],
+                {
+}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            var div_icon_32a0d8f9bd74f3e15decd971950ad0d9 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:600;color:#006837;white-space:nowrap;text-shadow:0 0 3px white;\"\u003ePoint Cook\u003c/div\u003e",
+  "iconSize": [120, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_b9068b93b555d11861dfdfb84d44520f.setIcon(div_icon_32a0d8f9bd74f3e15decd971950ad0d9);
+            
+    
+            var circle_marker_71aa0a774f332b57ce6d61081127905b = L.circleMarker(
+                [-37.8362, 144.9284],
+                {"bubblingMouseEvents": true, "color": "#fee08b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.597429735659805, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_71aa0a774f332b57ce6d61081127905b.bindTooltip(
+                `<div>
+                     
+        <b>Port Melbourne</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.31<br>
+        Liveability: 5.3/10<br>
+        Median rent: $2420/wk<br>
+        Honesty score: 0.57
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_94efa7af8160c708c9875c52afbbc260 = L.circleMarker(
+                [-37.8497, 144.992],
+                {"bubblingMouseEvents": true, "color": "#ffffbf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.627520635252324, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_94efa7af8160c708c9875c52afbbc260.bindTooltip(
+                `<div>
+                     
+        <b>Prahran</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.04<br>
+        Liveability: 5.6/10<br>
+        Median rent: $2395/wk<br>
+        Honesty score: 0.90
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_526834a4b38a1c48bc3ddb84888d7273 = L.circleMarker(
+                [-37.7445, 145.0127],
+                {"bubblingMouseEvents": true, "color": "#fee08b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.507157036882248, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_526834a4b38a1c48bc3ddb84888d7273.bindTooltip(
+                `<div>
+                     
+        <b>Preston</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.17<br>
+        Liveability: 5.1/10<br>
+        Median rent: $1759/wk<br>
+        Honesty score: 0.57
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31895f5a49386cdea7a5a30c0bb46e70 = L.circleMarker(
+                [-37.7172, 145.0073],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.253578518441124, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_31895f5a49386cdea7a5a30c0bb46e70.bindTooltip(
+                `<div>
+                     
+        <b>Reservoir</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.09<br>
+        Liveability: 5.1/10<br>
+        Median rent: $1517/wk<br>
+        Honesty score: 0.59
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5edfdd5206150194eb50b9fa2f5e5da9 = L.circleMarker(
+                [-37.8183, 144.9981],
+                {"bubblingMouseEvents": true, "color": "#f46d43", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.463483439556995, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_5edfdd5206150194eb50b9fa2f5e5da9.bindTooltip(
+                `<div>
+                     
+        <b>Richmond</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.58<br>
+        Liveability: 5.0/10<br>
+        Median rent: $2379/wk<br>
+        Honesty score: 0.49
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2561652aaecf0630b04f589c250d9cdf = L.circleMarker(
+                [-37.8058, 144.8865],
+                {"bubblingMouseEvents": true, "color": "#66bd63", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.776512381151395, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_2561652aaecf0630b04f589c250d9cdf.bindTooltip(
+                `<div>
+                     
+        <b>Seddon</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.60<br>
+        Liveability: 5.8/10<br>
+        Median rent: $1559/wk<br>
+        Honesty score: 0.42
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e6a781dcff35e0cd8840078b58a3297 = L.circleMarker(
+                [-37.8305, 144.9592],
+                {"bubblingMouseEvents": true, "color": "#a6d96a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.55302476230279, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_0e6a781dcff35e0cd8840078b58a3297.bindTooltip(
+                `<div>
+                     
+        <b>South Melbourne</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.24<br>
+        Liveability: 6.1/10<br>
+        Median rent: $2252/wk<br>
+        Honesty score: 0.81
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05f7a63cfe6799e72bacad730f8d1d82 = L.circleMarker(
+                [-37.6523, 145.093],
+                {"bubblingMouseEvents": true, "color": "#ffffbf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.881099153693448, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_05f7a63cfe6799e72bacad730f8d1d82.bindTooltip(
+                `<div>
+                     
+        <b>South Morang</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.13<br>
+        Liveability: 4.3/10<br>
+        Median rent: $1331/wk<br>
+        Honesty score: 0.17
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_029386b019ab5620d41868080ce1516b = L.circleMarker(
+                [-37.8388, 144.9929],
+                {"bubblingMouseEvents": true, "color": "#fee08b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.388256190575698, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_029386b019ab5620d41868080ce1516b.bindTooltip(
+                `<div>
+                     
+        <b>South Yarra</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.30<br>
+        Liveability: 5.4/10<br>
+        Median rent: $2586/wk<br>
+        Honesty score: 0.68
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c4a25fd658ab5452a7509875f61db25 = L.circleMarker(
+                [-37.823, 144.963],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.179814021523352, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_9c4a25fd658ab5452a7509875f61db25.bindTooltip(
+                `<div>
+                     
+        <b>Southbank</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.76<br>
+        Liveability: 5.0/10<br>
+        Median rent: $3340/wk<br>
+        Honesty score: 0.54
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_48ffb9d79e61bfde1dcb7b509937834b = L.marker(
+                [-37.823, 144.963],
+                {
+}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            var div_icon_db4e945c896e367a972041e9ea03326f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:600;color:#8b0000;white-space:nowrap;text-shadow:0 0 3px white;\"\u003eSouthbank\u003c/div\u003e",
+  "iconSize": [120, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_48ffb9d79e61bfde1dcb7b509937834b.setIcon(div_icon_db4e945c896e367a972041e9ea03326f);
+            
+    
+            var circle_marker_5474f93cecbc2ce08f30767d4ef6dcee = L.circleMarker(
+                [-37.8582, 144.9741],
+                {"bubblingMouseEvents": true, "color": "#f46d43", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.82091735450841, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_5474f93cecbc2ce08f30767d4ef6dcee.bindTooltip(
+                `<div>
+                     
+        <b>St Kilda</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.67<br>
+        Liveability: 4.5/10<br>
+        Median rent: $2126/wk<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a8e3e9af04197da4b52065be6556999 = L.circleMarker(
+                [-37.8666, 144.996],
+                {"bubblingMouseEvents": true, "color": "#ffffbf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.67192560860934, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_6a8e3e9af04197da4b52065be6556999.bindTooltip(
+                `<div>
+                     
+        <b>St Kilda East</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.11<br>
+        Liveability: 5.2/10<br>
+        Median rent: $1856/wk<br>
+        Honesty score: 0.64
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a87958cfdbacc4ce2fab6d7affd1d19b = L.circleMarker(
+                [-37.5767, 144.7267],
+                {"bubblingMouseEvents": true, "color": "#1a9850", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.179814021523352, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_a87958cfdbacc4ce2fab6d7affd1d19b.bindTooltip(
+                `<div>
+                     
+        <b>Sunbury</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.76<br>
+        Liveability: 5.7/10<br>
+        Median rent: $1281/wk<br>
+        Honesty score: 0.50
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e337ac9f27f81e515b543ab7740d147c = L.marker(
+                [-37.5767, 144.7267],
+                {
+}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            var div_icon_015481955160491748c369252c992aa9 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:600;color:#006837;white-space:nowrap;text-shadow:0 0 3px white;\"\u003eSunbury\u003c/div\u003e",
+  "iconSize": [120, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_e337ac9f27f81e515b543ab7740d147c.setIcon(div_icon_015481955160491748c369252c992aa9);
+            
+    
+            var circle_marker_1b13ad1ad5477befc278a1ff92d56a26 = L.circleMarker(
+                [-37.7886, 144.8327],
+                {"bubblingMouseEvents": true, "color": "#ffffbf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.253578518441124, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_1b13ad1ad5477befc278a1ff92d56a26.bindTooltip(
+                `<div>
+                     
+        <b>Sunshine</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.09<br>
+        Liveability: 4.7/10<br>
+        Median rent: $1441/wk<br>
+        Honesty score: 0.45
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d617dfe8cfed2d531de2744f92ca4b25 = L.circleMarker(
+                [-37.853, 144.689],
+                {"bubblingMouseEvents": true, "color": "#ffffbf", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_d617dfe8cfed2d531de2744f92ca4b25.bindTooltip(
+                `<div>
+                     
+        <b>Tarneit</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.00<br>
+        Liveability: 4.8/10<br>
+        Median rent: $1310/wk<br>
+        Honesty score: 0.55
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2dd5b8b0a66e95009285e2ccddb64bca = L.circleMarker(
+                [-37.7545, 145.0057],
+                {"bubblingMouseEvents": true, "color": "#66bd63", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.94128095287849, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_2dd5b8b0a66e95009285e2ccddb64bca.bindTooltip(
+                `<div>
+                     
+        <b>Thornbury</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.54<br>
+        Liveability: 5.9/10<br>
+        Median rent: $1665/wk<br>
+        Honesty score: 0.74
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05a62b2ab3d9c87201e6efde03fe29a6 = L.circleMarker(
+                [-37.8389, 145.0145],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_05a62b2ab3d9c87201e6efde03fe29a6.bindTooltip(
+                `<div>
+                     
+        <b>Toorak</b><br>
+        Classification: <b>overpriced trap</b><br>
+        Value gap: -0.96<br>
+        Liveability: 4.4/10<br>
+        Median rent: $4942/wk<br>
+        Honesty score: 0.54
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b2627b40a142b6f92d1596dcc2ec504d = L.marker(
+                [-37.8389, 145.0145],
+                {
+}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            var div_icon_839749567a54cd09419e7d7c438cf045 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:600;color:#8b0000;white-space:nowrap;text-shadow:0 0 3px white;\"\u003eToorak\u003c/div\u003e",
+  "iconSize": [120, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_b2627b40a142b6f92d1596dcc2ec504d.setIcon(div_icon_839749567a54cd09419e7d7c438cf045);
+            
+    
+            var circle_marker_9905d0666e96bc987a2690cfa20198b5 = L.circleMarker(
+                [-37.902, 144.6621],
+                {"bubblingMouseEvents": true, "color": "#d9ef8b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.731376031762617, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_9905d0666e96bc987a2690cfa20198b5.bindTooltip(
+                `<div>
+                     
+        <b>Werribee</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: +0.05<br>
+        Liveability: 4.9/10<br>
+        Median rent: $1307/wk<br>
+        Honesty score: 0.53
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bc58f8cd8b378536fe065ad7a58e519c = L.circleMarker(
+                [-37.8607, 144.8985],
+                {"bubblingMouseEvents": true, "color": "#a6d96a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.806603280743914, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_bc58f8cd8b378536fe065ad7a58e519c.bindTooltip(
+                `<div>
+                     
+        <b>Williamstown</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.33<br>
+        Liveability: 5.6/10<br>
+        Median rent: $1720/wk<br>
+        Honesty score: 0.58
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e10efdba6e3f0215a4223cf4a167aa50 = L.circleMarker(
+                [-37.8558, 144.991],
+                {"bubblingMouseEvents": true, "color": "#fee08b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffffbf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.343851217218681, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_e10efdba6e3f0215a4223cf4a167aa50.bindTooltip(
+                `<div>
+                     
+        <b>Windsor</b><br>
+        Classification: <b>fair value</b><br>
+        Value gap: -0.23<br>
+        Liveability: 5.2/10<br>
+        Median rent: $2010/wk<br>
+        Honesty score: 0.67
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b705736b3e32c89ec6d589a51cbc93f = L.circleMarker(
+                [-37.8167, 144.8892],
+                {"bubblingMouseEvents": true, "color": "#1a9850", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.82091735450841, "stroke": true, "weight": 2}
+            ).addTo(map_b292a106c76dfab57f09956e7b54606d);
+        
+    
+            circle_marker_1b705736b3e32c89ec6d589a51cbc93f.bindTooltip(
+                `<div>
+                     
+        <b>Yarraville</b><br>
+        Classification: <b>hidden gem</b><br>
+        Value gap: +0.67<br>
+        Liveability: 6.0/10<br>
+        Median rent: $1595/wk<br>
+        Honesty score: 0.69
+        
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
