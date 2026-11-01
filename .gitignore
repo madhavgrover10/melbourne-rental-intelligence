@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project: generated files (rebuild with scripts/02_load_data.py and scripts/03_export_for_dashboard.py)
+data/melbourne.db
+data/processed/
+.DS_Store
+node_modules/
