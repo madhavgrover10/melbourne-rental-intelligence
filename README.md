@@ -6,6 +6,8 @@ I combined three public datasets (rent, income and train station usage) in a SQL
 
 **Dashboard:** https://public.tableau.com/app/profile/madhav.grover/viz/MelbourneRentalAffordability/MelbourneRentalAffordabilityWhereIsRentingGettingSqueezed
 
+**Recommendation brief:** [docs/recommendation_brief.md](docs/recommendation_brief.md)
+
 ## What I found
 
 All figures are for the 110 rent areas in Greater Melbourne and the Mornington Peninsula (rent: Sep 2025 quarter).
