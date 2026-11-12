@@ -1,0 +1,111 @@
+area_id,region,area_name,median_rent,lease_count,rent_growth_1y_pct,rent_growth_5y_pct,population,hhd_income_weekly,rent_to_income_pct,stations,station_entries
+1,Inner Melbourne,Albert Park-Middle Park-West St Kilda,698,578,0.7,26.9,12995,2501.0,27.9,0,0
+53,Outer Western Melbourne,Altona,550,4394,0.0,37.5,11490,1826.0,30.1,3,585800
+2,Inner Melbourne,Armadale,625,635,4.2,25.0,9368,2193.0,28.5,1,469600
+40,Southern Melbourne,Aspendale-Chelsea-Carrum,620,1102,3.3,40.9,19871,1935.0,32.0,5,1208500
+23,Inner Eastern Melbourne,Balwyn,740,839,5.7,32.1,13495,1975.0,37.5,0,0
+90,Outer Eastern Melbourne,Bayswater,550,498,5.8,41.0,12262,1598.0,34.4,1,446150
+41,Southern Melbourne,Bentleigh,700,2039,7.7,40.0,17921,2263.0,30.9,5,2302950
+98,South Eastern Melbourne,Berwick,600,2324,5.3,50.0,50298,2113.0,28.4,2,1208150
+24,Inner Eastern Melbourne,Blackburn,600,750,3.4,39.2,14478,2065.0,29.1,2,1523850
+91,Outer Eastern Melbourne,Boronia,560,554,5.7,41.8,23607,1619.0,34.6,1,462850
+25,Inner Eastern Melbourne,Box Hill,610,2437,1.7,35.6,14353,1267.0,48.1,1,2648350
+42,Southern Melbourne,Brighton,825,726,18.7,20.8,23252,2710.0,30.4,0,0
+43,Southern Melbourne,Brighton East,835,426,-3.5,14.4,16757,2544.0,32.8,0,0
+65,North Western Melbourne,Broadmeadows-Roxburgh Park,515,1880,3.0,39.2,36653,1466.0,35.1,2,1376950
+66,North Western Melbourne,Brunswick,600,1652,3.4,25.0,24896,2096.0,28.6,4,1402850
+26,Inner Eastern Melbourne,Bulleen-Templestowe-Doncaster,670,1700,3.1,39.6,53205,1821.0,36.8,0,0
+78,North Eastern Melbourne,Bundoora-Greensborough-Hurstbridge,560,2316,3.7,40.0,52692,1864.0,30.0,3,769550
+27,Inner Eastern Melbourne,Burwood-Ashburton,650,906,3.2,32.7,23099,2049.0,31.7,5,1040550
+5,Inner Melbourne,CBD-St Kilda Rd,660,13655,1.5,41.9,54941,1448.0,45.6,5,55996100
+28,Inner Eastern Melbourne,Camberwell-Glen Iris,650,1402,0.0,30.0,48096,2475.0,26.3,9,3689950
+29,Inner Eastern Melbourne,Canterbury-Surrey Hills-Mont Albert,678,566,8.0,31.7,26403,2580.0,26.3,3,1044850
+3,Inner Melbourne,Carlton North,760,361,11.8,28.8,6177,2400.0,31.7,0,0
+4,Inner Melbourne,Carlton-Parkville,620,2593,6.9,29.2,23129,1473.0,42.1,0,0
+44,Southern Melbourne,Carnegie,570,1037,3.6,31.0,17909,1878.0,30.4,2,1349200
+45,Southern Melbourne,Caulfield,650,2292,2.4,36.8,5748,2143.0,30.3,2,3846650
+30,Inner Eastern Melbourne,Chadstone-Oakleigh,620,1067,3.3,34.8,17994,1961.0,31.6,2,3214250
+46,Southern Melbourne,Cheltenham,635,1642,5.8,33.7,23992,1919.0,33.1,3,1607450
+31,Inner Eastern Melbourne,Clayton,600,2178,1.7,42.9,18988,1494.0,40.2,1,1514000
+67,North Western Melbourne,Coburg-Pascoe Vale South,600,1243,6.2,33.3,37108,2116.0,28.4,3,1013100
+6,Inner Melbourne,Collingwood-Abbotsford,650,1646,4.0,35.4,18267,2163.0,30.1,3,1755500
+68,North Western Melbourne,Craigieburn,520,3259,2.8,33.3,65178,1798.0,28.9,1,1508250
+99,South Eastern Melbourne,Cranbourne,580,5205,3.6,48.7,21281,1477.0,39.3,1,1054250
+92,Outer Eastern Melbourne,Croydon-Lilydale,600,1803,9.1,44.6,45956,1671.0,35.9,2,959650
+100,South Eastern Melbourne,Dandenong,520,1601,4.0,48.6,30127,1267.0,41.0,1,1970750
+101,South Eastern Melbourne,Dandenong North-Endeavour Hills,530,980,6.0,47.2,47005,1594.0,33.2,0,0
+7,Inner Melbourne,Docklands,700,2950,7.7,40.0,15495,1957.0,35.8,0,0
+32,Inner Eastern Melbourne,Doncaster East-Donvale,700,987,7.7,41.4,43570,1881.0,37.2,0,0
+106,Mornington Peninsula,Dromana-Portsea,595,1681,8.2,50.6,7413,1428.0,41.7,0,0
+69,North Western Melbourne,East Brunswick,600,1001,7.1,33.3,13279,2088.0,28.7,0,0
+33,Inner Eastern Melbourne,East Hawthorn,595,881,3.5,32.2,14834,2253.0,26.4,0,0
+8,Inner Melbourne,East Melbourne,650,431,8.3,25.0,4896,2345.0,27.7,0,0
+9,Inner Melbourne,East St Kilda,550,1495,0.0,31.0,12571,2020.0,27.2,0,0
+47,Southern Melbourne,Elsternwick,600,607,4.3,31.9,10887,2209.0,27.2,4,2111500
+79,North Eastern Melbourne,Eltham-Research-Montmorency,640,500,6.7,39.1,30792,2339.0,27.4,2,519800
+10,Inner Melbourne,Elwood,595,1183,2.6,32.2,15153,2096.0,28.4,0,0
+70,North Western Melbourne,Essendon,550,1961,3.8,32.5,21240,2132.0,25.8,2,1620150
+80,North Eastern Melbourne,Fairfield-Alphington,550,676,3.8,31.0,12237,2182.0,25.2,4,1060050
+93,Outer Eastern Melbourne,Ferntree Gully,600,452,7.1,42.9,27398,1770.0,33.9,2,518150
+11,Inner Melbourne,Fitzroy,700,611,6.1,23.9,10431,2194.0,31.9,0,0
+12,Inner Melbourne,Fitzroy North-Clifton Hill,725,887,6.6,31.8,19387,2455.0,29.5,3,1044400
+13,Inner Melbourne,Flemington-Kensington,570,1638,14.0,29.5,17770,1943.0,29.3,5,1923700
+54,Outer Western Melbourne,Footscray,525,1757,1.0,34.6,17131,1763.0,29.8,2,4529500
+107,Mornington Peninsula,Frankston,550,1990,7.8,48.6,37331,1387.0,39.7,2,1040950
+71,North Western Melbourne,Gladstone Park-Tullamarine,530,485,6.0,35.9,14946,1430.0,37.1,0,0
+34,Inner Eastern Melbourne,Glen Waverley-Mulgrave,695,1967,5.3,39.0,62531,1916.0,36.3,2,1907800
+48,Southern Melbourne,Hampton-Beaumaris,750,1012,4.9,26.1,27465,2654.0,28.3,3,1526200
+108,Mornington Peninsula,Hastings-Flinders,580,587,5.5,45.0,11499,1286.0,45.1,1,10850
+35,Inner Eastern Melbourne,Hawthorn,550,1531,3.8,27.9,22322,2145.0,25.6,3,2699550
+81,North Eastern Melbourne,Heidelberg-Heidelberg West,565,1318,6.6,34.5,12612,1698.0,33.3,3,1381700
+82,North Eastern Melbourne,Ivanhoe-Ivanhoe East,600,791,7.1,27.7,17136,2396.0,25.0,1,617600
+72,North Western Melbourne,Keilor,650,43,6.6,58.5,5906,2046.0,31.8,0,0
+55,Outer Western Melbourne,Keilor East-Avondale Heights,550,1233,1.9,34.1,27466,1765.0,31.2,0,0
+36,Inner Eastern Melbourne,Kew,690,887,4.1,32.7,24499,2497.0,27.6,0,0
+49,Southern Melbourne,Malvern,630,399,7.7,31.3,9929,2606.0,24.2,1,703650
+50,Southern Melbourne,Malvern East,610,905,1.7,32.6,22296,2383.0,25.6,0,0
+56,Outer Western Melbourne,Melton,450,3699,0.0,28.6,7953,1058.0,42.5,0,0
+51,Southern Melbourne,Mentone-Parkdale-Mordialloc,580,1081,0.9,31.8,34391,2013.0,28.8,3,1381550
+83,North Eastern Melbourne,Mill Park-Epping,530,1937,6.0,39.5,62201,1701.0,31.2,1,748150
+73,North Western Melbourne,Moonee Ponds-Ascot Vale,575,1396,4.5,33.7,31421,2150.0,26.7,3,1388850
+37,Inner Eastern Melbourne,Mount Waverley,695,860,6.9,39.0,35340,2066.0,33.6,2,1047200
+109,Mornington Peninsula,Mt Eliza-Mornington-Mt Martha,695,962,3.7,40.1,64339,1969.0,35.3,0,0
+52,Southern Melbourne,Murrumbeena-Hughesdale,580,710,5.5,31.8,17559,2057.0,28.2,2,1267750
+102,South Eastern Melbourne,Narre Warren-Hampton Park,560,2012,5.7,47.4,53771,1643.0,34.1,1,522200
+57,Outer Western Melbourne,Newport-Spotswood,620,857,0.5,25.3,16478,2623.0,23.6,3,1872150
+103,South Eastern Melbourne,Noble Park,520,1126,4.0,44.4,32257,1382.0,37.6,2,1266250
+14,Inner Melbourne,North Melbourne-West Melbourne,600,2933,1.7,25.0,22978,1742.0,34.4,1,1394050
+84,North Eastern Melbourne,Northcote,640,940,4.1,28.0,25276,2287.0,28.0,3,685150
+38,Inner Eastern Melbourne,Nunawading-Mitcham,580,783,6.6,36.5,29208,1991.0,29.1,2,1683600
+74,North Western Melbourne,Oak Park-Glenroy-Fawkner,530,1743,6.0,32.5,44780,1665.0,31.8,6,2035100
+104,South Eastern Melbourne,Pakenham,540,1812,5.9,54.3,54118,1664.0,32.5,2,550250
+75,North Western Melbourne,Pascoe Vale-Coburg North,550,995,1.9,31.0,26498,2011.0,27.3,2,842250
+15,Inner Melbourne,Port Melbourne,795,1077,13.6,34.7,17633,2372.0,33.5,0,0
+16,Inner Melbourne,Prahran-Windsor,590,1995,5.4,28.3,19476,2084.0,28.3,3,2218650
+85,North Eastern Melbourne,Preston,560,1371,7.7,31.8,33790,1844.0,30.4,3,1376200
+86,North Eastern Melbourne,Reservoir,530,1788,6.0,37.7,51096,1541.0,34.4,2,1047150
+17,Inner Melbourne,Richmond-Burnley,675,2549,3.8,28.6,29381,2250.0,30.0,5,6638050
+94,Outer Eastern Melbourne,Ringwood,560,1216,2.0,34.9,19144,1654.0,33.9,4,2431350
+95,Outer Eastern Melbourne,Rowville,650,410,8.3,44.4,33571,2205.0,29.5,0,0
+110,Mornington Peninsula,Seaford-Carrum Downs,560,1477,7.7,47.4,39191,1589.0,35.2,2,493550
+18,Inner Melbourne,South Melbourne,650,1147,1.6,26.7,11548,2101.0,30.9,0,0
+19,Inner Melbourne,South Yarra,620,3079,3.3,29.2,25028,2063.0,30.1,2,3646050
+20,Inner Melbourne,Southbank,680,4349,4.6,44.7,22631,1926.0,35.3,0,0
+105,South Eastern Melbourne,Springvale,570,1466,3.6,42.5,22174,1402.0,40.7,3,2522350
+58,Outer Western Melbourne,St Albans-Deer Park,470,1558,6.8,30.6,56187,1286.0,36.5,3,2186900
+21,Inner Melbourne,St Kilda,560,2593,3.7,33.3,19490,1779.0,31.5,0,0
+76,North Western Melbourne,Sunbury,520,1041,6.1,40.5,38851,1925.0,27.0,1,691050
+59,Outer Western Melbourne,Sunshine,480,1476,6.7,33.3,9445,1566.0,30.7,2,1991500
+60,Outer Western Melbourne,Sydenham,500,4284,0.0,25.0,10578,1813.0,27.6,0,0
+87,North Eastern Melbourne,Thomastown-Lalor,500,999,4.2,38.9,43453,1291.0,38.7,3,1384050
+88,North Eastern Melbourne,Thornbury,525,838,1.9,25.0,19005,1971.0,26.6,1,376150
+22,Inner Melbourne,Toorak,688,630,2.7,27.4,12817,2533.0,27.2,2,650900
+39,Inner Eastern Melbourne,Vermont-Forest Hill-Burwood East,650,907,8.3,42.9,32448,1772.0,36.7,0,0
+96,Outer Eastern Melbourne,Wantirna-Scoresby,620,1021,5.1,38.4,20303,1910.0,32.5,0,0
+61,Outer Western Melbourne,Werribee-Hoppers Crossing,490,11050,-0.6,32.4,87243,1617.0,30.3,2,1975450
+77,North Western Melbourne,West Brunswick,480,1044,-1.8,23.1,14746,1797.0,26.7,0,0
+62,Outer Western Melbourne,West Footscray,550,1183,5.8,37.5,11729,1989.0,27.7,3,1097700
+89,North Eastern Melbourne,Whittlesea,540,2669,1.9,38.5,6117,1628.0,33.2,0,0
+63,Outer Western Melbourne,Williamstown,670,457,6.3,28.8,14407,2411.0,27.8,2,315850
+97,Outer Eastern Melbourne,Yarra Ranges,580,663,5.5,45.0,,,,0,0
+64,Outer Western Melbourne,Yarraville-Seddon,620,1023,4.2,26.5,20779,2482.0,25.0,2,1237200

@@ -6,6 +6,8 @@ I combined three public datasets (rent, income and train station usage) in a SQL
 
 **Dashboard:** https://public.tableau.com/app/profile/madhav.grover/viz/MelbourneRentalAffordability/MelbourneRentalAffordabilityWhereIsRentingGettingSqueezed
 
+**Power BI version:** the same dashboard rebuilt in Power BI Desktop (three chart pages combined into one dashboard page): [`powerbi/Melbourne_Rental_Affordability.pbix`](powerbi/Melbourne_Rental_Affordability.pbix), with a [PDF export](powerbi/Melbourne_Rental_Affordability.pdf) and a [screenshot](powerbi/dashboard.png). The build steps are in [`powerbi/POWERBI_BUILD_GUIDE.md`](powerbi/POWERBI_BUILD_GUIDE.md).
+
 **Recommendation brief:** [docs/recommendation_brief.md](docs/recommendation_brief.md)
 
 ## What I found

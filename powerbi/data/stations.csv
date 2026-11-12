@@ -1,0 +1,223 @@
+station,lat,lon,pax_annual,pax_weekday,area_name,match_method
+Flinders Street,-37.81830513,144.9669643,19633300,60900,CBD-St Kilda Rd,alias
+Southern Cross,-37.81793643,144.9514112,14696050,47600,CBD-St Kilda Rd,alias
+Melbourne Central,-37.80993877,144.9625935,11876900,38300,CBD-St Kilda Rd,alias
+Parliament,-37.81105406,144.9729109,6344650,22350,CBD-St Kilda Rd,alias
+Footscray,-37.80108298,144.9031992,4383950,14000,Footscray,name
+Richmond,-37.82407446,144.9901643,3712750,9850,Richmond-Burnley,name
+Flagstaff,-37.81198131,144.9556538,3445200,12350,CBD-St Kilda Rd,alias
+Caulfield,-37.87745946,145.0425248,3205100,9600,Caulfield,name
+South Yarra,-37.83844935,144.9923422,3199050,10350,South Yarra,name
+Box Hill,-37.81922165,145.1214289,2648350,8350,Box Hill,name
+Glenferrie,-37.82146682,145.0364388,1978650,6800,Hawthorn,nearest
+Dandenong,-37.98996792,145.2097254,1970750,6300,Dandenong,name
+Oakleigh,-37.90037214,145.0883079,1624200,5150,Chadstone-Oakleigh,name
+Huntingdale,-37.91101734,145.1023643,1590050,5650,Chadstone-Oakleigh,nearest
+Sunshine,-37.78853633,144.8328782,1577600,5100,Sunshine,name
+Ringwood,-37.81588648,145.2289685,1514250,4650,Ringwood,name
+Clayton,-37.92468255,145.1205344,1514000,4750,Clayton,name
+Craigieburn,-37.6018169,144.9433203,1508250,4800,Craigieburn,name
+Springvale,-37.94950878,145.1534518,1429400,4300,Springvale,name
+North Melbourne,-37.80630984,144.9415102,1394050,3950,North Melbourne-West Melbourne,name
+Williams Landing,-37.86986533,144.7474447,1389550,4800,,unmatched
+Essendon,-37.7560117,144.9161975,1347950,4350,Essendon,name
+Watergardens,-37.70112872,144.7741805,1295450,4350,,unmatched
+Camberwell,-37.82656714,145.0586972,1260400,3950,Camberwell-Glen Iris,name
+Newport,-37.84271757,144.8835999,1245950,3950,Newport-Spotswood,name
+Glen Waverley,-37.87950407,145.1620575,1209700,3650,Glen Waverley-Mulgrave,name
+Blackburn,-37.82007075,145.1500135,1206950,3750,Blackburn,name
+Jolimont,-37.81652702,144.9840983,1060400,2500,Richmond-Burnley,nearest
+Cranbourne,-38.09953731,145.280599,1054250,3500,Cranbourne,name
+Werribee,-37.89937805,144.661118,1049600,3550,Werribee-Hoppers Crossing,name
+Frankston,-38.14299007,145.1261623,1035450,3050,Frankston,name
+Carnegie,-37.88624148,145.0585751,1015400,3250,Carnegie,name
+Berwick,-38.04040829,145.3457261,1008200,3450,Berwick,name
+Noble Park,-37.96723193,145.1769357,993800,3200,Noble Park,name
+St Albans,-37.74486131,144.8000505,962650,3200,St Albans-Deer Park,name
+Hoppers Crossing,-37.88327618,144.7009549,925850,3150,Werribee-Hoppers Crossing,name
+Mitcham,-37.81800987,145.1919735,925550,3050,Nunawading-Mitcham,name
+Laverton,-37.86369404,144.7726167,892250,3000,,unmatched
+Burnley,-37.82756022,145.0075551,881250,2950,Richmond-Burnley,name
+Prahran,-37.84951848,144.9898599,879500,2800,Prahran-Windsor,name
+Broadmeadows,-37.68304926,144.9196132,878300,2750,Broadmeadows-Roxburgh Park,name
+Heidelberg,-37.75707293,145.0606855,822300,2700,Heidelberg-Heidelberg West,name
+Yarraville,-37.81585044,144.8899337,820600,2600,Yarraville-Seddon,name
+Moonee Ponds,-37.76570666,144.9191607,782550,2450,Moonee Ponds-Ascot Vale,name
+Elsternwick,-37.88475311,145.0008979,763550,2400,Elsternwick,name
+Nunawading,-37.82060317,145.1748917,758050,2500,Nunawading-Mitcham,name
+Reservoir,-37.71688492,145.0069958,757800,2400,Reservoir,name
+Balaclava,-37.86948773,144.9935121,752350,2400,Prahran-Windsor,nearest
+Epping,-37.65238715,145.0301217,748150,2450,Mill Park-Epping,name
+Glenroy,-37.70453633,144.9172204,740900,2350,Oak Park-Glenroy-Fawkner,name
+Clifton Hill,-37.78865745,144.9954167,719300,2100,Fitzroy North-Clifton Hill,name
+Cheltenham,-37.96664989,145.0545579,717500,2200,Cheltenham,name
+Murrumbeena,-37.89019832,145.0673749,712400,2350,Murrumbeena-Hughesdale,name
+Sandringham,-37.95033018,145.0045614,710850,2100,Hampton-Beaumaris,nearest
+Malvern,-37.8662533,145.0292939,703650,2200,Malvern,name
+Syndal,-37.87622963,145.1497805,698100,2200,Glen Waverley-Mulgrave,nearest
+Sunbury,-37.57909097,144.7273188,691050,2200,Sunbury,name
+Mernda,-37.602549,145.100883,662700,2150,,unmatched
+Victoria Park,-37.79915782,144.9944514,659700,2100,Collingwood-Abbotsford,nearest
+Mount Waverley,-37.87525526,145.1280557,658250,2100,Mount Waverley,name
+Auburn,-37.82239831,145.0458437,650000,2050,Camberwell-Glen Iris,nearest
+Glenhuntly,-37.88971946,145.0422229,641550,1950,Caulfield,nearest
+Westall,-37.93849121,145.1388326,634250,1950,Springvale,nearest
+Ginifer,-37.75751083,144.8095734,624500,2100,St Albans-Deer Park,nearest
+Ivanhoe,-37.76889674,145.0454252,617600,2000,Ivanhoe-Ivanhoe East,name
+North Richmond,-37.81039836,144.9925003,608300,1950,Collingwood-Abbotsford,nearest
+Newmarket,-37.78732767,144.9289785,600650,1900,Flemington-Kensington,nearest
+Keilor Plains,-37.72927934,144.7937381,599750,2000,St Albans-Deer Park,nearest
+Thomastown,-37.68033809,145.0142789,595700,1900,Thomastown-Lalor,name
+Union,-37.823477,145.1000368,593100,1900,Canterbury-Surrey Hills-Mont Albert,nearest
+Windsor,-37.85605308,144.9920352,586800,1900,Prahran-Windsor,name
+Bentleigh,-37.91742457,145.0369951,586000,1750,Bentleigh,name
+Mentone,-37.9818654,145.0651659,583650,1900,Mentone-Parkdale-Mordialloc,name
+Preston,-37.73867424,145.000522,581250,1800,Preston,name
+Merinda Park,-38.07900048,145.2635114,577750,1950,,unmatched
+East Richmond,-37.82639995,144.9970657,575900,2050,Richmond-Burnley,nearest
+South Morang,-37.6491588,145.0670324,569650,1800,,unmatched
+Mooroolbark,-37.78474883,145.3124024,569250,1900,,unmatched
+Hughesdale,-37.89488129,145.0776351,555350,1800,Murrumbeena-Hughesdale,name
+Ormond,-37.90321167,145.0396134,539450,1650,Bentleigh,nearest
+Pascoe Vale,-37.73075596,144.9281956,538950,1750,Pascoe Vale-Coburg North,name
+Hawthorn,-37.82182601,145.0228987,531400,1750,Hawthorn,name
+Mordialloc,-38.00658295,145.0876594,529850,1600,Mentone-Parkdale-Mordialloc,name
+Narre Warren,-38.02780932,145.3039694,522200,1700,Narre Warren-Hampton Park,name
+Hallam,-38.01774038,145.2697768,521500,1750,,unmatched
+Moorabbin,-37.93435329,145.0367383,520000,1650,Bentleigh,nearest
+West Footscray,-37.8018087,144.8853248,512550,1800,West Footscray,name
+Lilydale,-37.75551777,145.3477102,512300,1600,Croydon-Lilydale,name
+Middle Brighton,-37.91513441,144.9962991,512250,1550,,unmatched
+Coburg,-37.74234502,144.9633363,511300,1550,Coburg-Pascoe Vale South,name
+North Brighton,-37.90488721,145.002605,502000,1600,Elsternwick,nearest
+Roxburgh Park,-37.63823121,144.9354037,498650,1650,Broadmeadows-Roxburgh Park,name
+Pakenham,-38.08061397,145.4863791,495750,1550,Pakenham,name
+Lalor,-37.66585075,145.0171932,494550,1600,Thomastown-Lalor,name
+Ascot Vale,-37.77530609,144.9218207,491400,1600,Moonee Ponds-Ascot Vale,name
+Collingwood,-37.80452593,144.9937497,487500,1600,Collingwood-Abbotsford,name
+Hampton,-37.93797681,145.0014706,482700,1500,Hampton-Beaumaris,name
+Southland,-37.958758,145.049124,479000,1350,Cheltenham,nearest
+Armadale,-37.85645238,145.0193255,469600,1500,Armadale,name
+Ripponlea,-37.87590643,144.9952366,465900,1500,Elsternwick,nearest
+Boronia,-37.8604518,145.2843851,462850,1500,Boronia,name
+Sandown Park,-37.95650457,145.1628259,458700,1550,Springvale,nearest
+Tooronga,-37.84936553,145.0417337,453150,1500,Camberwell-Glen Iris,nearest
+Heatherdale,-37.81889537,145.2127872,448700,1500,Ringwood,nearest
+Croydon,-37.79543697,145.2805978,447350,1500,Croydon-Lilydale,name
+Hawksburn,-37.84459087,145.0021421,447000,1400,South Yarra,nearest
+Bayswater,-37.84173004,145.2681364,446150,1450,Bayswater,name
+Fairfield,-37.77917126,145.0169053,437700,1350,Fairfield-Alphington,name
+Rosanna,-37.7428786,145.0661403,432900,1400,Heidelberg-Heidelberg West,nearest
+Kensington,-37.79378022,144.9305244,421500,1350,Flemington-Kensington,name
+Oak Park,-37.71794973,144.9215188,418000,1350,Oak Park-Glenroy-Fawkner,name
+Toorak,-37.85077381,145.0139086,417900,1350,Toorak,name
+Seddon,-37.80900514,144.8956716,416600,1300,Yarraville-Seddon,name
+Albion,-37.77765281,144.8247036,413900,1400,Sunshine,nearest
+Bell,-37.74556212,145.000155,412250,1300,Preston,nearest
+Highett,-37.948425,145.0418718,410950,1250,Cheltenham,nearest
+West Richmond,-37.81494896,144.9914228,407750,1350,Richmond-Burnley,nearest
+Lynbrook,-38.05734118,145.2492751,407450,1400,,unmatched
+Cardinia Road,-38.07129047,145.437791,405950,1350,,unmatched
+Gardiner,-37.85327908,145.0516547,399400,1200,Camberwell-Glen Iris,nearest
+Jewell,-37.77498702,144.9587169,395350,1200,Brunswick,nearest
+Tottenham,-37.7992509,144.8629449,394350,1350,West Footscray,nearest
+Jordanville,-37.87360339,145.1120902,388950,1250,Mount Waverley,nearest
+Holmesglen,-37.87440222,145.090662,383100,1200,Burwood-Ashburton,nearest
+Regent,-37.72840277,145.0027726,382700,1250,Preston,nearest
+Gardenvale,-37.89669508,145.0041684,380050,1200,Elsternwick,nearest
+Greensborough,-37.70395408,145.1082474,378250,1200,Bundoora-Greensborough-Hurstbridge,name
+Thornbury,-37.75505179,144.9985715,376150,1200,Thornbury,name
+McKinnon,-37.91030903,145.038299,369950,1150,Bentleigh,nearest
+Anstey,-37.76124203,144.960684,365100,1100,Brunswick,nearest
+Spotswood,-37.83063888,144.8859335,354600,1050,Newport-Spotswood,name
+Chelsea,-38.05195538,145.1160413,352250,1100,Aspendale-Chelsea-Carrum,name
+Brunswick,-37.76772055,144.9595865,350600,1050,Brunswick,name
+Eltham,-37.71354967,145.147822,344100,1100,Eltham-Research-Montmorency,name
+Carrum,-38.07489292,145.1224183,343700,1050,Aspendale-Chelsea-Carrum,name
+Ferntree Gully,-37.88169799,145.2952513,337700,1150,Ferntree Gully,name
+East Malvern,-37.87693002,145.069393,333800,1050,Carnegie,nearest
+Brighton Beach,-37.92648432,144.9891536,332650,1000,Hampton-Beaumaris,nearest
+South Kensington,-37.79953087,144.925469,324400,1050,Flemington-Kensington,nearest
+Seaford,-38.10402104,145.1282304,320500,1000,Seaford-Carrum Downs,name
+Laburnum,-37.82078023,145.1407027,316900,1000,Blackburn,nearest
+Watsonia,-37.71095798,145.0837934,315600,1050,Bundoora-Greensborough-Hurstbridge,nearest
+Macleod,-37.7260123,145.0691433,314850,1000,,unmatched
+Macaulay,-37.79426673,144.9361663,303550,950,Flemington-Kensington,nearest
+Strathmore,-37.74359132,144.9273157,303300,1000,Pascoe Vale-Coburg North,nearest
+Keon Park,-37.69487012,145.0118838,293800,950,Thomastown-Lalor,nearest
+Northcote,-37.76986537,144.9952772,293050,950,Northcote,name
+Royal Park,-37.78119293,144.9523013,291800,900,Brunswick,nearest
+Ruthven,-37.70789754,145.0095166,289350,900,Reservoir,nearest
+Patterson,-37.92514919,145.03547,287550,900,Bentleigh,nearest
+Merlynston,-37.72093389,144.9613135,284100,900,Oak Park-Glenroy-Fawkner,nearest
+Belgrave,-37.9091021,145.3552913,283100,850,,unmatched
+Coolaroo,-37.66100253,144.9260556,281400,950,,unmatched
+Flemington Bridge,-37.78813995,144.9393233,273600,850,Flemington-Kensington,nearest
+Moreland,-37.75448484,144.961823,273050,850,Coburg-Pascoe Vale South,nearest
+Yarraman,-37.97825454,145.1916003,272450,900,Noble Park,nearest
+Glenbervie,-37.74720985,144.9209387,272200,900,Essendon,nearest
+North Williamstown,-37.85733348,144.8890695,271600,900,Newport-Spotswood,nearest
+Ringwood East,-37.81196804,145.2501909,268800,900,Ringwood,nearest
+Canterbury,-37.82448518,145.0812242,268450,850,Canterbury-Surrey Hills-Mont Albert,name
+Parkdale,-37.99307882,145.0763268,268050,850,Mentone-Parkdale-Mordialloc,name
+Upfield,-37.66607779,144.9467399,264250,850,,unmatched
+Altona,-37.8671476,144.8296447,263300,800,Altona,name
+Darling,-37.86895684,145.0629508,262650,800,Camberwell-Glen Iris,nearest
+Glen Iris,-37.85930842,145.0582249,261300,850,Camberwell-Glen Iris,name
+Dennis,-37.77918729,145.0082416,260800,850,Fairfield-Alphington,nearest
+Alphington,-37.77839363,145.0312549,249100,800,Fairfield-Alphington,name
+Aircraft,-37.86660595,144.7608094,248850,800,,unmatched
+Croxton,-37.764101,144.9970562,244250,750,Northcote,nearest
+Kooyong,-37.83992894,145.0335516,233000,750,Toorak,nearest
+Gowrie,-37.700678,144.9588743,232350,700,Oak Park-Glenroy-Fawkner,nearest
+Westona,-37.86516348,144.8134936,229400,750,Altona,nearest
+Batman,-37.73352285,144.9628406,228750,700,Coburg-Pascoe Vale South,nearest
+Middle Gorge,-37.644062,145.09214,222950,750,,unmatched
+Burwood,-37.85156328,145.0805111,221250,750,Burwood-Ashburton,name
+Jacana,-37.69513079,144.9158505,213150,650,Oak Park-Glenroy-Fawkner,nearest
+Officer,-38.06614572,145.4109872,208600,700,,unmatched
+Hawkstowe,-37.622992,145.097396,208500,700,,unmatched
+Ashburton,-37.86196753,145.0813438,201950,700,Burwood-Ashburton,name
+Westgarth,-37.7806207,144.9992332,201950,650,Fitzroy North-Clifton Hill,nearest
+Edithvale,-38.03805602,145.1085355,201450,650,Aspendale-Chelsea-Carrum,nearest
+Beaconsfield,-38.05083135,145.3660737,199950,700,Berwick,nearest
+Heathmont,-37.82832227,145.2445554,199600,700,Ringwood,nearest
+Middle Footscray,-37.8025047,144.8914721,190800,650,West Footscray,nearest
+Heyington,-37.83467244,145.0226353,189500,650,Hawthorn,nearest
+East Camberwell,-37.82589419,145.0681902,185950,600,Camberwell-Glen Iris,nearest
+Chatham,-37.82429952,145.0886479,183300,600,Canterbury-Surrey Hills-Mont Albert,nearest
+Upper Ferntree Gully,-37.8926717,145.3075302,180450,550,Ferntree Gully,nearest
+Montmorency,-37.71529624,145.1215157,175700,550,Eltham-Research-Montmorency,name
+Kananook,-38.12174203,145.1352953,173050,550,Seaford-Carrum Downs,nearest
+Aspendale,-38.02722019,145.1021496,169500,550,Aspendale-Chelsea-Carrum,name
+Williamstown Beach,-37.86398189,144.8944837,166350,500,Williamstown,nearest
+Diggers Rest,-37.62701651,144.7199224,165600,550,,unmatched
+Williamstown,-37.86775292,144.9053233,149500,450,Williamstown,name
+Merri,-37.77784668,144.9929725,147850,450,Northcote,nearest
+Fawkner,-37.71462129,144.960545,146600,450,Oak Park-Glenroy-Fawkner,name
+Flemington Racecourse,-37.78720192,144.9075887,145550,200,Footscray,nearest
+Riversdale,-37.83150543,145.069646,144000,550,Camberwell-Glen Iris,nearest
+Bonbeach,-38.06294478,145.1196804,141600,450,Aspendale-Chelsea-Carrum,nearest
+Hartwell,-37.84398457,145.0755596,138050,450,Burwood-Ashburton,nearest
+Eaglemont,-37.76358553,145.0539427,126500,400,Heidelberg-Heidelberg West,nearest
+Rushall,-37.78321711,144.9924071,123150,400,Fitzroy North-Clifton Hill,nearest
+Showgrounds,-37.7835,144.915,114900,200,Moonee Ponds-Ascot Vale,nearest
+Diamond Creek,-37.67329744,145.1585062,114700,350,,unmatched
+Darebin,-37.77496341,145.038476,112450,350,Fairfield-Alphington,nearest
+Upwey,-37.90369097,145.3313334,97850,300,,unmatched
+Alamein,-37.86832039,145.0796557,96200,300,Burwood-Ashburton,nearest
+Seaholme,-37.86784231,144.8409577,93100,300,Altona,nearest
+Hurstbridge,-37.63939817,145.1920169,75700,250,Bundoora-Greensborough-Hurstbridge,name
+Willison,-37.83571565,145.0702976,73100,250,Camberwell-Glen Iris,nearest
+East Pakenham,-38.084284,145.506311,54500,150,Pakenham,nearest
+Tecoma,-37.90811849,145.3429946,47250,150,,unmatched
+Wattle Glen,-37.66396792,145.1816145,27200,100,,unmatched
+Hastings,-38.30565853,145.1859799,10850,50,Hastings-Flinders,name
+Bittern,-38.33739032,145.1780265,8800,50,,unmatched
+Somerville,-38.22534196,145.1762449,8050,50,,unmatched
+Crib Point,-38.36612338,145.2040433,7900,50,,unmatched
+Stony Point,-38.37423454,145.2218375,6950,50,,unmatched
+Leawarra,-38.152034,145.139534,5500,50,Frankston,nearest
+Tyabb,-38.259815,145.1864007,4050,50,,unmatched
+Morradoo,-38.35403334,145.1896025,3400,50,,unmatched
+Baxter,-38.19404306,145.1605261,2500,50,,unmatched
